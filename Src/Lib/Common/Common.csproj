@@ -68,13 +68,13 @@
     <Compile Include="Utils\MathUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Protocol\Protocol.csproj">
       <Project>{ecf59eee-d33e-41ee-b2f8-b59bcdba856f}</Project>
       <Name>Protocol</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
