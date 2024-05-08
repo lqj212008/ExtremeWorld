@@ -173,9 +173,6 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(9)]
         public MapTeleportRequest mapTeleport { get; set; }
 
-        [global::ProtoBuf.ProtoMember(10)]
-        public FirstTestRequest firstRequest { get; set; }
-
     }
 
     [global::ProtoBuf.ProtoContract()]

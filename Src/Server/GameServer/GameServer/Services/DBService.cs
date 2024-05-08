@@ -20,6 +20,7 @@ namespace GameServer.Services
         public void Init()
         {
             entities = new ExtremeWorldEntities();
+            Log.Info("DBService has been started");
         }
     }
 }
