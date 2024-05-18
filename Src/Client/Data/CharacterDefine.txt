@@ -5,6 +5,7 @@
     "Type": "Normal",
     "Class": "WARRIOR",
     "Resource": "Character/Warrior",
+    "Description": "这是一个战士，近战单位，血量高，防御高",
     "InitLevel": 1,
     "Speed": 300
   },
