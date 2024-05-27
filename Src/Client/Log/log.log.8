@@ -1,0 +1,29 @@
+2024-05-27 17:29:59,908 [ 1] INFO  Unity: LoadingManager start
+2024-05-27 17:30:02,977 [ 1] INFO  Unity: DataManager > DataManager()
+2024-05-27 17:30:11,442 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-05-27 17:30:11,443 [ 1] INFO  Unity: ConnectToServer() Start
+2024-05-27 17:30:11,447 [ 1] INFO  Unity: DoConnect
+2024-05-27 17:30:11,448 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-05-27 17:30:11,452 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2024-05-27 17:30:11,455 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-05-27 17:30:11,548 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-05-27 17:30:11,554 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-05-27 17:30:11,635 [ 1] WARN  Unity: 
+Asset 'Archer': Transition 'AnyState -> Archer_Death' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+2024-05-27 17:30:11,652 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-05-27 17:30:11,739 [ 1] FATAL Unity: UICharInfo.Start () (at Assets/Scripts/UI/UICharInfo.cs:18)
+
+NullReferenceException: Object reference not set to an instance of an object
+2024-05-27 17:30:46,558 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-05-27 17:30:46,559 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+CloseConnection(), errorCode: 1007
+2024-05-27 17:30:46,562 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-05-27 17:30:46,562 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+CloseConnection(), errorCode: 1007

@@ -1,0 +1,27 @@
+2024-05-27 22:02:30,896 [ 1] INFO  Unity: LoadingManager start
+2024-05-27 22:02:34,676 [ 1] INFO  Unity: DataManager > DataManager()
+2024-05-27 22:02:43,573 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-05-27 22:02:43,574 [ 1] INFO  Unity: ConnectToServer() Start
+2024-05-27 22:02:43,578 [ 1] INFO  Unity: DoConnect
+2024-05-27 22:02:43,579 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-05-27 22:02:43,583 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2024-05-27 22:02:43,587 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-05-27 22:02:44,077 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-05-27 22:02:44,082 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-05-27 22:02:44,158 [ 1] WARN  Unity: 
+Asset 'Archer': Transition 'AnyState -> Archer_Death' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+2024-05-27 22:02:44,178 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-05-27 22:02:46,754 [ 1] INFO  Unity: Select Char:[1]¥Û≈£[Warrior]
+2024-05-27 22:02:57,735 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-05-27 22:02:57,736 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+CloseConnection(), errorCode: 1007
+2024-05-27 22:02:57,737 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-05-27 22:02:57,737 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+CloseConnection(), errorCode: 1007
