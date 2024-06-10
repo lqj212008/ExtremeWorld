@@ -34,6 +34,7 @@ public class LoadingManager : MonoBehaviour {
 		yield return DataManager.Instance.LoadData();
 
 		//Init basic services
+		MapService.Instance.Init();
 		UserService.Instance.Init();
 
 		//Fake Loading Simulate

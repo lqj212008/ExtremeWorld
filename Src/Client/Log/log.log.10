@@ -1,65 +1,39 @@
-2024-05-27 17:28:04,086 [ 1] INFO  Unity: LoadingManager start
-2024-05-27 17:28:07,223 [ 1] INFO  Unity: DataManager > DataManager()
-2024-05-27 17:28:15,703 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-05-27 17:28:15,704 [ 1] INFO  Unity: ConnectToServer() Start
-2024-05-27 17:28:15,718 [ 1] INFO  Unity: DoConnect
-2024-05-27 17:28:15,720 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-05-27 17:28:15,723 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-06-09 22:53:02,695 [ 1] INFO  Unity: LoadingManager start
+2024-06-09 22:53:06,709 [ 1] INFO  Unity: DataManager > DataManager()
+2024-06-09 22:53:24,757 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-06-09 22:53:24,765 [ 1] INFO  Unity: ConnectToServer() Start
+2024-06-09 22:53:24,774 [ 1] INFO  Unity: DoConnect
+2024-06-09 22:53:24,776 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-06-09 22:53:24,790 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-05-27 17:28:17,769 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:51)
-Services.UserService:SendLogin(String, String) (at Assets/Scripts/Services/UserService.cs:115)
-UILogin:OnClickLogin() (at Assets/Scripts/UI/UILogin.cs:50)
-UnityEngine.EventSystems.EventSystem:Update()
+2024-06-09 22:53:24,805 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-06-09 22:53:25,041 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-06-09 22:53:25,067 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-06-09 22:53:25,368 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-09 22:53:26,657 [ 1] INFO  Unity: Select Char:[1]大牛[Warrior]
+2024-06-09 22:53:29,113 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-06-09 22:53:29,148 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-06-09 22:53:29,151 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 2
+2024-06-09 22:53:29,157 [ 1] INFO  Unity: AddCharacter: 1: 大牛 Map: 1 Entity: (0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-06-09 22:53:29,165 [ 1] INFO  Unity: AddCharacter: 1: 大牛 Map: 1 Entity: (0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-06-09 22:53:29,167 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-06-09 22:53:29,167 [ 1] INFO  Unity: OnMapCharacterEnter:1 [1]
+2024-06-09 22:53:29,168 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-06-09 22:53:29,635 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-09 22:57:48,176 [ 1] FATAL Unity: UINameBar.Update () (at Assets/Scripts/UI/UINameBar.cs:26)
 
-CloseConnection(), errorCode: 1005
-2024-05-27 17:28:17,781 [ 1] ERROR Unity: UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Services.UserService:ConnectToServer() (at Assets/Scripts/Services/UserService.cs:51)
-Services.UserService:SendLogin(String, String) (at Assets/Scripts/Services/UserService.cs:115)
-UILogin:OnClickLogin() (at Assets/Scripts/UI/UILogin.cs:50)
-UnityEngine.EventSystems.EventSystem:Update()
-
-DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-2024-05-27 17:28:17,782 [ 1] INFO  Unity: DoConnect
-2024-05-27 17:28:17,783 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-05-27 17:28:17,783 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2024-05-27 17:28:19,811 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-CloseConnection(), errorCode: 1005
-2024-05-27 17:28:19,812 [ 1] ERROR Unity: UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-2024-05-27 17:28:21,461 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-05-27 17:28:21,461 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+NullReferenceException: Object reference not set to an instance of an object
+2024-06-09 22:57:48,678 [ 1] INFO  Unity: Character_1_大牛 OnDestroy: ID: 0 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
+2024-06-09 22:57:48,765 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-09 22:57:52,287 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-06-09 22:57:52,289 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
 CloseConnection(), errorCode: 1007
-2024-05-27 17:28:21,462 [ 1] FATAL Unity: Services.UserService.DisconnectNotify (Int32 result, System.String reason) (at Assets/Scripts/Services/UserService.cs:86)
-Services.UserService.OnGameServerDisconnect (Int32 result, System.String reason) (at Assets/Scripts/Services/UserService.cs:78)
-Network.NetClient.RaiseDisonnected (Int32 result, System.String reason) (at Assets/Scripts/Network/NetClient.cs:87)
-Network.NetClient.CloseConnection (Int32 errCode) (at Assets/Scripts/Network/NetClient.cs:216)
-Network.NetClient.OnDestroy () (at Assets/Scripts/Network/NetClient.cs:175)
+2024-06-09 22:57:52,299 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-06-09 22:57:52,299 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-NullReferenceException: Object reference not set to an instance of an object
+CloseConnection(), errorCode: 1007

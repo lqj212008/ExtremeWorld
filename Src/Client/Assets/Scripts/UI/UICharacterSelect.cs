@@ -91,9 +91,12 @@ public class UICharacterSelect : MonoBehaviour {
 		if (string.IsNullOrEmpty(this.charName.text))
 		{
 			MessageBox.Show("请输入角色名称！");
+			InitCharacterSelect(true);
+			return;
 		}
 
 		UserService.Instance.SendCharacterCreate(this.charName.text, this.charClass);
+		InitCharacterSelect(true);
 	}
 
 	public void OnSelectClass(int charClass)
@@ -127,12 +130,12 @@ public class UICharacterSelect : MonoBehaviour {
 		var cha = User.Instance.info.Player.Characters[idx];
 		Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.Id, cha.Name, cha.Class);
 		User.Instance.CurrentCharacter = cha;
-		characterView.CurractCharacter = ((int)cha.Class-1);
+		characterView.CurractCharacter = idx;
 
 		for (int i = 0; i < User.Instance.info.Player.Characters.Count; i++)
 		{ 
-			UICharInfo ci = this.uiChars[idx].GetComponent<UICharInfo>();
-			ci.Selected = (idx == i);
+			UICharInfo ci = this.uiChars[i].GetComponent<UICharInfo>();
+			ci.Selected = (i == idx);
 		}
            
 		
@@ -142,7 +145,7 @@ public class UICharacterSelect : MonoBehaviour {
 	{
 		if(selectCharacterIdx >= 0)
 		{
-			MessageBox.Show("进入游戏","进入游戏",MessageBoxType.Confirm);
+			UserService.Instance.SendGameEnter(selectCharacterIdx);
 		}
 	}
 
