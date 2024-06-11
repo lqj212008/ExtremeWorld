@@ -1,38 +1,36 @@
-2024-06-09 22:53:02,695 [ 1] INFO  Unity: LoadingManager start
-2024-06-09 22:53:06,709 [ 1] INFO  Unity: DataManager > DataManager()
-2024-06-09 22:53:24,757 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-09 22:53:24,765 [ 1] INFO  Unity: ConnectToServer() Start
-2024-06-09 22:53:24,774 [ 1] INFO  Unity: DoConnect
-2024-06-09 22:53:24,776 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-09 22:53:24,790 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-06-09 23:14:36,196 [ 1] INFO  Unity: LoadingManager start
+2024-06-09 23:14:39,595 [ 1] INFO  Unity: DataManager > DataManager()
+2024-06-09 23:14:45,322 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-06-09 23:14:45,323 [ 1] INFO  Unity: ConnectToServer() Start
+2024-06-09 23:14:45,327 [ 1] INFO  Unity: DoConnect
+2024-06-09 23:14:45,328 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-06-09 23:14:45,332 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-06-09 22:53:24,805 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-06-09 22:53:25,041 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-06-09 22:53:25,067 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-06-09 22:53:25,368 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-09 22:53:26,657 [ 1] INFO  Unity: Select Char:[1]大牛[Warrior]
-2024-06-09 22:53:29,113 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-09 22:53:29,148 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-06-09 22:53:29,151 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 2
-2024-06-09 22:53:29,157 [ 1] INFO  Unity: AddCharacter: 1: 大牛 Map: 1 Entity: (0:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-09 22:53:29,165 [ 1] INFO  Unity: AddCharacter: 1: 大牛 Map: 1 Entity: (0:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-09 22:53:29,167 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-06-09 22:53:29,167 [ 1] INFO  Unity: OnMapCharacterEnter:1 [1]
-2024-06-09 22:53:29,168 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-06-09 22:53:29,635 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-09 22:57:48,176 [ 1] FATAL Unity: UINameBar.Update () (at Assets/Scripts/UI/UINameBar.cs:26)
-
-NullReferenceException: Object reference not set to an instance of an object
-2024-06-09 22:57:48,678 [ 1] INFO  Unity: Character_1_大牛 OnDestroy: ID: 0 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
-2024-06-09 22:57:48,765 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-09 22:57:52,287 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-09 22:57:52,289 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-06-09 23:14:45,335 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-06-09 23:14:45,427 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-06-09 23:14:45,438 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-06-09 23:14:45,975 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-09 23:14:46,946 [ 1] INFO  Unity: Select Char:[1]大牛[Warrior]
+2024-06-09 23:14:52,499 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-06-09 23:14:52,528 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-06-09 23:14:52,529 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 2
+2024-06-09 23:14:52,531 [ 1] INFO  Unity: AddCharacter: 1: 大牛 Map: 1 Entity: (0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-06-09 23:14:52,532 [ 1] INFO  Unity: AddCharacter: 1: 大牛 Map: 1 Entity: (0:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-06-09 23:14:52,533 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-06-09 23:14:52,534 [ 1] INFO  Unity: OnMapCharacterEnter:1 [1]
+2024-06-09 23:14:52,535 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-06-09 23:14:53,001 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-09 23:14:53,366 [ 1] INFO  Unity: Character_1_大牛 OnDestroy: ID: 0 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
+2024-06-09 23:14:53,440 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-09 23:15:16,431 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-06-09 23:15:16,432 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
 CloseConnection(), errorCode: 1007
-2024-06-09 22:57:52,299 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-09 22:57:52,299 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-06-09 23:15:16,433 [ 1] INFO  Unity: Character_1_大牛 OnDestroy: ID: 0 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
+2024-06-09 23:15:16,434 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-06-09 23:15:16,434 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
