@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Models;
-using UnityEditor.VersionControl;
-using UnityEngine.SocialPlatforms;
 using Services;
+using System;
 
 public class UICharacterSelect : MonoBehaviour {
 
@@ -26,25 +25,29 @@ public class UICharacterSelect : MonoBehaviour {
 
 	public Text descs;  //描述
 
-	public Text[] names;  
+	public Text[] names;
 
 	private int selectCharacterIdx = -1;
 
 	public UICharacterView characterView;
 
+
 	// Use this for initialization
 	void Start() {
 		DataManager.Instance.Load();
 		InitCharacterSelect(true);
-        for (int i = 0; i < 3; i++)       
-            names[i].text = DataManager.Instance.Characters[i + 1].Name;
+		for (int i = 0; i < 3; i++)
+			names[i].text = DataManager.Instance.Characters[i + 1].Name;
 		characterView.CurractCharacter = 2;
 		UserService.Instance.OnCharacterCreate = OnCharacterCreate;
-    }
-   
+		UserService.Instance.OnDeleteCharacter = OnDeleteCharacter;
+	}
 
-	// Update is called once per frame
-	void Update() {
+    
+
+
+    // Update is called once per frame
+    void Update() {
 
 	}
 
@@ -61,7 +64,7 @@ public class UICharacterSelect : MonoBehaviour {
 			}
 			uiChars.Clear();
 
-			for(int i = 0; i<User.Instance.info.Player.Characters.Count; i++)
+			for (int i = 0; i < User.Instance.info.Player.Characters.Count; i++)
 			{
 				GameObject go = Instantiate(uiCharInfo, this.uiCharList);
 				UICharInfo charInfo = go.GetComponent<UICharInfo>();
@@ -102,12 +105,12 @@ public class UICharacterSelect : MonoBehaviour {
 	public void OnSelectClass(int charClass)
 	{
 		this.charClass = (CharacterClass)charClass;
-		characterView.CurractCharacter = charClass -1;
+		characterView.CurractCharacter = charClass - 1;
 
-		for(int i = 0; i < 3; i++)
+		for (int i = 0; i < 3; i++)
 		{
-			titles[i].gameObject.SetActive(i == charClass -1);
-			names[i].text = DataManager.Instance.Characters[i+1].Name;
+			titles[i].gameObject.SetActive(i == charClass - 1);
+			names[i].text = DataManager.Instance.Characters[i + 1].Name;
 		}
 		descs.text = DataManager.Instance.Characters[charClass].Description;
 	}
@@ -124,28 +127,49 @@ public class UICharacterSelect : MonoBehaviour {
 		}
 	}
 
-	public void OnSelectCharacter(int idx)
+    void OnDeleteCharacter(Result result, string message)
+    {
+        if(result == Result.Success)
+		{
+            InitCharacterSelect(true);
+        }
+		else
+		{
+            MessageBox.Show(message, "错误", MessageBoxType.Error);
+        }
+    }
+
+    public void OnSelectCharacter(int idx)
 	{
 		this.selectCharacterIdx = idx;
 		var cha = User.Instance.info.Player.Characters[idx];
 		Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.Id, cha.Name, cha.Class);
 		User.Instance.CurrentCharacter = cha;
-		characterView.CurractCharacter = idx;
+		characterView.CurractCharacter = (int)cha.Class - 1;
+
 
 		for (int i = 0; i < User.Instance.info.Player.Characters.Count; i++)
-		{ 
+		{
 			UICharInfo ci = this.uiChars[i].GetComponent<UICharInfo>();
 			ci.Selected = (i == idx);
 		}
-           
-		
+
+
 	}
 
 	public void OnClickPlay()
 	{
+		if (selectCharacterIdx >= 0)
+		{
+            UserService.Instance.SendGameEnter(selectCharacterIdx);
+		}
+	}
+
+	public void OnClickDelete()
+	{
 		if(selectCharacterIdx >= 0)
 		{
-			UserService.Instance.SendGameEnter(selectCharacterIdx);
+			UserService.Instance.SendDeleteCharacter(selectCharacterIdx);
 		}
 	}
 

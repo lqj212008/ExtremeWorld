@@ -23,4 +23,10 @@ public class UIMainCity : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void OnBecameInvisible()
+    {
+		SceneManager.Instance.LoadScene("CharSelect");
+		Services.UserService.Instance.SendGameLeave();
+    }
 }

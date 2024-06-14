@@ -112,10 +112,11 @@ message NetMessageRequest{
 	UserRegisterRequest userRegister = 1;
 	UserLoginRequest userLogin = 2;
 	UserCreateCharacterRequest createChar = 3;
-	UserGameEnterRequest gameEnter = 4;
-	UserGameLeaveRequest gameLeave = 5;
+	UserDeleteCharacterRequest deleteChar = 4;
+	UserGameEnterRequest gameEnter = 5;
+	UserGameLeaveRequest gameLeave = 6;
 	
-	MapCharacterEnterRequest mapCharacterEnter = 6;
+	MapCharacterEnterRequest mapCharacterEnter = 7;
 
 	MapEntitySyncRequest mapEntitySync = 8;
 	MapTeleportRequest mapTeleport = 9;
@@ -126,22 +127,19 @@ message NetMessageResponse{
 	UserRegisterResponse userRegister = 1;
 	UserLoginResponse userLogin = 2;
 	UserCreateCharacterResponse createChar = 3;
-	UserGameEnterResponse gameEnter = 4;
-	UserGameLeaveResponse gameLeave = 5;
+	UserDeleteCharacterResponse deleteChar = 4;
+	UserGameEnterResponse gameEnter = 5;
+	UserGameLeaveResponse gameLeave = 6;
 
-	MapCharacterEnterResponse mapCharacterEnter = 6;
-	MapCharacterLeaveResponse mapCharacterLeave = 7;
+	MapCharacterEnterResponse mapCharacterEnter = 7;
+	MapCharacterLeaveResponse mapCharacterLeave = 8;
 
-	MapEntitySyncResponse mapEntitySync = 8;
+	MapEntitySyncResponse mapEntitySync = 9;
 	
 }
 
 
 // User Protocol
-message FirstTestRequest{
-	string helloworld = 1;
-}
-
 message UserLoginRequest {
 	string user = 1;
 	string passward = 2;
@@ -152,7 +150,6 @@ message UserLoginResponse {
 	string errormsg = 2;
 	NUserInfo userinfo = 3;
 }
-
 
 message UserRegisterRequest
 {
@@ -172,6 +169,17 @@ message UserCreateCharacterRequest
 }
 
 message UserCreateCharacterResponse {
+	RESULT result = 1;
+	string errormsg = 2;
+	repeated NCharacterInfo characters = 3;
+}
+
+message UserDeleteCharacterRequest
+{
+	int32 CharacterId = 1;
+}
+
+message UserDeleteCharacterResponse{
 	RESULT result = 1;
 	string errormsg = 2;
 	repeated NCharacterInfo characters = 3;

@@ -25,7 +25,9 @@ namespace GameServer.Services
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserLoginRequest>(this.OnLogin);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserCreateCharacterRequest>(this.OnCharacterCreate);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserGameEnterRequest>(this.OnGameEnter);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserDeleteCharacterRequest>(this.OnDeleteCharacter);
         }
+
 
         public void Init()
         {
@@ -139,7 +141,57 @@ namespace GameServer.Services
 
             message.Response.createChar.Result = Result.Success;
             message.Response.createChar.Errormsg = "None";
+            foreach (var c in sender.Session.User.Player.Characters)
+            {
+                NCharacterInfo info = new NCharacterInfo();
+                info.Id = c.ID;
+                info.Name = c.Name;
+                info.Type = CharacterType.Player;
+                info.Class = (CharacterClass)c.Class;
+                info.Tid = c.ID;
+                message.Response.createChar.Characters.Add(info);
+            }
 
+
+            byte[] data = PackageHandler.PackMessage(message);
+            sender.SendData(data, 0, data.Length);
+        }
+
+        private void OnDeleteCharacter(NetConnection<NetSession> sender, UserDeleteCharacterRequest request)
+        {
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.deleteChar = new UserDeleteCharacterResponse();
+
+            TCharacter dbchar = sender.Session.User.Player.Characters.ElementAt(request.CharacterId);
+            
+            if(dbchar == null)
+            {
+                message.Response.deleteChar.Result = Result.Failed;
+                message.Response.deleteChar.Errormsg = "角色不存在或已删除";
+            }
+            else
+            {
+                Log.InfoFormat("UserDeleteCharacterRequest: characterID:{0} Name:{1}",dbchar.ID,dbchar.Name);
+                DBService.Instance.Entities.Characters.Remove(dbchar);
+                sender.Session.User.Player.Characters.Remove(dbchar);
+                DBService.Instance.Entities.SaveChanges();
+                message.Response.deleteChar.Result= Result.Success;
+                message.Response.deleteChar.Errormsg= "None";
+                foreach (var c in sender.Session.User.Player.Characters)
+                {
+                    NCharacterInfo info = new NCharacterInfo();
+                    info.Id = c.ID;
+                    info.Name = c.Name;
+                    info.Type = CharacterType.Player;
+                    info.Class = (CharacterClass)c.Class;
+                    info.Tid = c.ID;
+                    message.Response.deleteChar.Characters.Add(info);
+
+                }
+            }
+
+            Log.InfoFormat("UserDeleteCharacterResponse: Result:{0}  msg:{1}", message.Response.deleteChar.Result, message.Response.deleteChar.Errormsg);
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
         }

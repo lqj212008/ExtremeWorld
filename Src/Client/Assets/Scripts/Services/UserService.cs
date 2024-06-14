@@ -14,6 +14,7 @@ namespace Services
 		public UnityEngine.Events.UnityAction<Result, String> OnLogin;
 		public UnityEngine.Events.UnityAction<Result, String> OnRegister;
 		public UnityEngine.Events.UnityAction<Result, String> OnCharacterCreate;
+		public UnityEngine.Events.UnityAction<Result, String> OnDeleteCharacter;
 
 		NetMessage pendingMessage = null;
 
@@ -26,6 +27,7 @@ namespace Services
 			MessageDistributer.Instance.Subscribe<UserLoginResponse>(this.OnUserLogin);
 			MessageDistributer.Instance.Subscribe<UserRegisterResponse>(this.OnUserRegister);  //监听服务器的注册返回结果
 			MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
+			MessageDistributer.Instance.Subscribe<UserDeleteCharacterResponse>(this.OnUserDeleteCharacter);
 			MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnGameEnter);
 			MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnGameLeave);
 			MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
@@ -38,6 +40,7 @@ namespace Services
 			MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(this.OnUserLogin);
 			MessageDistributer.Instance.Unsubscribe<UserRegisterResponse>(this.OnUserRegister);
 			MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
+			MessageDistributer.Instance.Unsubscribe<UserDeleteCharacterResponse>(this.OnUserDeleteCharacter);
 			MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnGameEnter);
 			MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnGameLeave);
 			MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse> (this.OnCharacterEnter);
@@ -129,7 +132,7 @@ namespace Services
 
 			if (response.Result == Result.Success)
 			{
-				Models.User.Instance.SetupUserInfo(response.Userinfo);
+				User.Instance.SetupUserInfo(response.Userinfo);
 			};
 			if(this.OnLogin != null)
 			{
@@ -198,8 +201,8 @@ namespace Services
 
 			if(response.Result == Result.Success)
 			{
-				Models.User.Instance.info.Player.Characters.Clear();
-				Models.User.Instance.info.Player.Characters.AddRange(response.Characters);
+				User.Instance.info.Player.Characters.Clear();
+				User.Instance.info.Player.Characters.AddRange(response.Characters);
 			}
 
 			if(this.OnCharacterCreate != null)
@@ -208,7 +211,33 @@ namespace Services
 			}
 		}
 
-		public void SendGameEnter(int chatacterIdx)
+
+        public void SendDeleteCharacter(int chatacterIdx)
+        {
+			Debug.LogFormat("SendDeleteCharacter:CharacterID:{0} ", chatacterIdx);
+			NetMessage message = new NetMessage();
+			message.Request = new NetMessageRequest();
+			message.Request.deleteChar = new UserDeleteCharacterRequest();
+			message.Request.deleteChar.CharacterId = chatacterIdx;
+            NetClient.Instance.SendMessage(message);
+        }
+
+        private void OnUserDeleteCharacter(object sender, UserDeleteCharacterResponse response)
+        {
+			Debug.LogFormat("OnUserDeleteCharacter:{0} {1}", response.Result, response.Errormsg);
+            if (response.Result == Result.Success)
+            {
+                User.Instance.info.Player.Characters.Clear();
+                User.Instance.info.Player.Characters.AddRange(response.Characters);
+            }
+
+            if (this.OnCharacterCreate != null)
+            {
+                this.OnCharacterCreate(response.Result, response.Errormsg);
+            }
+        }
+
+        public void SendGameEnter(int chatacterIdx)
 		{
 			Debug.LogFormat("UserGameEnterRequest::characterId :{0}",chatacterIdx);
 			NetMessage message = new NetMessage();
@@ -224,8 +253,8 @@ namespace Services
 
 			if(response.Result == Result.Success) 
 			{
-
-			}
+                
+            }
 		}
 
 		public void SendGameLeave()
@@ -249,7 +278,7 @@ namespace Services
 			User.Instance.CurrentCharacter = info;
 			SceneManager.Instance.LoadScene(DataManager.Instance.Maps[response.mapId].Resource);
 		}
-		
+
     }
 }
 
