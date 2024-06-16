@@ -36,6 +36,7 @@ public class UIMinimap : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(this.playerTransform == null) return;
 
 		float pivotX = playerTransform.position.x / (realSize.x / 100);
 		float pivotY = playerTransform.position.z / (realSize.y / 100);

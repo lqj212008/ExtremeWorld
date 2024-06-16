@@ -30,7 +30,7 @@ namespace Entities
         public Character(NCharacterInfo info) : base(info.Entity) 
         {
             this.Info = info; 
-            this.Define = DataManager.Instance.Characters[info.Id];
+            this.Define = DataManager.Instance.Characters[info.Tid];
         }
 
         public void MoveForward()

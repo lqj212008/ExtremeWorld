@@ -49,7 +49,7 @@ namespace GameServer.Models
         ///<param name="character"></param>
         internal void CharacterEnter(NetConnection<NetSession> conn, Character character)
         {
-            Log.InfoFormat("CharacterEnter:Map:{0} characterId:{1}",this.Define.ID,character.Id);
+            Log.InfoFormat("CharacterEnter:Map:{0} characterId:{1}",this.Define.ID,character.Info.Id);
 
             character.Info.mapId = this.ID;
 
@@ -65,7 +65,7 @@ namespace GameServer.Models
                 this.SendCharacterEnterMap(kv.Value.connection, character.Info);
             }
 
-            this.MapCharacters[character.Id] = new MapCharacter(conn,character);
+            this.MapCharacters[character.Info.Id] = new MapCharacter(conn,character);
 
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data,0,data.Length);

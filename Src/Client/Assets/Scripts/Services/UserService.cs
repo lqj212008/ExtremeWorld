@@ -15,6 +15,7 @@ namespace Services
 		public UnityEngine.Events.UnityAction<Result, String> OnRegister;
 		public UnityEngine.Events.UnityAction<Result, String> OnCharacterCreate;
 		public UnityEngine.Events.UnityAction<Result, String> OnDeleteCharacter;
+		//public UnityEngine.Events.UnityAction<Result,String> On
 
 		NetMessage pendingMessage = null;
 
@@ -30,7 +31,7 @@ namespace Services
 			MessageDistributer.Instance.Subscribe<UserDeleteCharacterResponse>(this.OnUserDeleteCharacter);
 			MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnGameEnter);
 			MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnGameLeave);
-			MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+			//MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
 		}
 
         
@@ -43,7 +44,7 @@ namespace Services
 			MessageDistributer.Instance.Unsubscribe<UserDeleteCharacterResponse>(this.OnUserDeleteCharacter);
 			MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnGameEnter);
 			MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnGameLeave);
-			MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse> (this.OnCharacterEnter);
+			//MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse> (this.OnCharacterEnter);
 			NetClient.Instance.OnConnect -= OnGameServerConnect;
 			NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
 		}
@@ -268,7 +269,7 @@ namespace Services
 
 		void OnGameLeave(object sender, UserGameLeaveResponse response)
 		{
-			
+			//Debug.LogFormat("OnGameLeave: {0} [{1}]",)
 		}
 
 		void OnCharacterEnter(object sender, MapCharacterEnterResponse response)

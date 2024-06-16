@@ -113,7 +113,7 @@ public class PlayerInputController : MonoBehaviour {
 		//Debug.LogFormat("LateUpdate velocity {0}: {1}",this,rb.velocity.magnitude,this.speed);
 		this.lastPos = this.rb.transform.position;
 
-		if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > 50)
+		if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > 80)
 		{
 			this.character.SetPosition(GameObjectTool.WorldToLogic(this.rb.transform.position));
 			this.SendEntityEvent(EntityEvent.None);
