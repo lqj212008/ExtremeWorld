@@ -15,7 +15,6 @@ namespace Services
 		public UnityEngine.Events.UnityAction<Result, String> OnRegister;
 		public UnityEngine.Events.UnityAction<Result, String> OnCharacterCreate;
 		public UnityEngine.Events.UnityAction<Result, String> OnDeleteCharacter;
-		//public UnityEngine.Events.UnityAction<Result,String> On
 
 		NetMessage pendingMessage = null;
 
@@ -269,15 +268,21 @@ namespace Services
 
 		void OnGameLeave(object sender, UserGameLeaveResponse response)
 		{
-			//Debug.LogFormat("OnGameLeave: {0} [{1}]",)
+			Debug.LogFormat("OnGameLeave: {0} [{1}]", response.Result, response.Errormsg);
+			if(response.Result == Result.Success)
+			{
+				MapService.Instance.CurrentMapId = 0;
+			}
 		}
 
 		void OnCharacterEnter(object sender, MapCharacterEnterResponse response)
 		{
+			/*
 			Debug.LogFormat("OnMapCharacterEnter:{0} [{1}]", response.mapId, response.Characters[0].Id);
 			NCharacterInfo info = response.Characters[0];
 			User.Instance.CurrentCharacter = info;
 			SceneManager.Instance.LoadScene(DataManager.Instance.Maps[response.mapId].Resource);
+			*/
 		}
 
     }

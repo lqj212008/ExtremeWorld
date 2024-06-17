@@ -9,17 +9,13 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager> {
 
 	public Dictionary<Transform, GameObject> elements = new Dictionary<Transform, GameObject>();
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    protected override void OnStart()
+    {
+        nameBarPrefab.SetActive(false);
+    }
 
-	public void AddCharacterNameBar(Transform owner,Character character)
+
+    public void AddCharacterNameBar(Transform owner,Character character)
 	{
 		GameObject goNameBar = Instantiate(nameBarPrefab, this.transform);
 		goNameBar.name = "NameBar" + character.entityId;

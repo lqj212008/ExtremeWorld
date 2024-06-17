@@ -4,6 +4,7 @@ using UnityEngine;
 
 using Entities;
 using SkillBridge.Message;
+using Services;
 public class PlayerInputController : MonoBehaviour {
 
 	public Rigidbody rb;
@@ -127,6 +128,7 @@ public class PlayerInputController : MonoBehaviour {
 		{
 			entityController.OnEntityEvent(entityEvent);
 		}
+		MapService.Instance.SendMapEntitySync(entityEvent,this.character.EntityData);
 	}
 
 }

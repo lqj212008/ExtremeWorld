@@ -1,56 +1,30 @@
-2024-06-15 16:32:22,373 [ 1] INFO  Unity: LoadingManager start
-2024-06-15 16:32:26,016 [ 1] INFO  Unity: DataManager > DataManager()
-2024-06-15 16:32:36,123 [ 1] INFO  Unity: UserLoginRequest::user: 1 psw: 1
-2024-06-15 16:32:36,124 [ 1] INFO  Unity: ConnectToServer() Start
-2024-06-15 16:32:36,128 [ 1] INFO  Unity: DoConnect
-2024-06-15 16:32:36,130 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-15 16:32:36,133 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-06-17 15:39:40,024 [ 1] INFO  Unity: LoadingManager start
+2024-06-17 15:39:43,143 [ 1] INFO  Unity: DataManager > DataManager()
+2024-06-17 15:39:48,411 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-06-17 15:39:48,413 [ 1] INFO  Unity: ConnectToServer() Start
+2024-06-17 15:39:48,416 [ 1] INFO  Unity: DoConnect
+2024-06-17 15:39:48,417 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-06-17 15:39:48,421 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-06-15 16:32:36,136 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-06-15 16:32:36,273 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-06-15 16:32:36,284 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-06-15 16:32:36,551 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-15 16:32:38,124 [ 1] INFO  Unity: Select Char:[18]2[Wizard]
-2024-06-15 16:32:39,104 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-15 16:32:39,130 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-06-15 16:32:41,626 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 2
-2024-06-15 16:32:41,628 [ 1] INFO  Unity: AddCharacter: 18: 2 Map: 1 Entity: (0:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-15 16:32:41,630 [ 1] FATAL Unity: System.Collections.Generic.Dictionary`2[System.Int32,Common.Data.CharacterDefine].get_Item (Int32 key) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:150)
-Entities.Character..ctor (SkillBridge.Message.NCharacterInfo info) (at Assets/Scripts/Entities/Character.cs:33)
-Managers.CharacterManager.AddCharacter (SkillBridge.Message.NCharacterInfo cha) (at Assets/Scripts/Managers/CharacterManager.cs:39)
-Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse message) (at Assets/Scripts/Services/MapService.cs:43)
-Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg)
-Network.MessageDispatch`1[System.Object].Dispatch (System.Object sender, SkillBridge.Message.NetMessageResponse message)
-Network.MessageDistributer`1[System.Object].Distribute ()
-Network.NetClient.ProceeMessage () (at Assets/Scripts/Network/NetClient.cs:421)
-Network.NetClient.Update () (at Assets/Scripts/Network/NetClient.cs:439)
-
-KeyNotFoundException: The given key was not present in the dictionary.
-2024-06-15 16:34:02,695 [ 1] INFO  Unity: Select Char:[18]2[Wizard]
-2024-06-15 16:34:09,239 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-15 16:34:09,285 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-06-15 16:34:10,926 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
-2024-06-15 16:34:16,578 [ 1] INFO  Unity: AddCharacter: 18: 2 Map: 1 Entity: (0:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-15 16:34:46,687 [ 1] FATAL Unity: System.Collections.Generic.Dictionary`2[System.Int32,Common.Data.CharacterDefine].get_Item (Int32 key) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Collections.Generic/Dictionary.cs:150)
-Entities.Character..ctor (SkillBridge.Message.NCharacterInfo info) (at Assets/Scripts/Entities/Character.cs:33)
-Managers.CharacterManager.AddCharacter (SkillBridge.Message.NCharacterInfo cha) (at Assets/Scripts/Managers/CharacterManager.cs:39)
-Services.MapService.OnMapCharacterEnter (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse message) (at Assets/Scripts/Services/MapService.cs:43)
-Network.MessageDistributer`1[System.Object].RaiseEvent[MapCharacterEnterResponse] (System.Object sender, SkillBridge.Message.MapCharacterEnterResponse msg)
-Network.MessageDispatch`1[System.Object].Dispatch (System.Object sender, SkillBridge.Message.NetMessageResponse message)
-Network.MessageDistributer`1[System.Object].Distribute ()
-Network.NetClient.ProceeMessage () (at Assets/Scripts/Network/NetClient.cs:421)
-Network.NetClient.Update () (at Assets/Scripts/Network/NetClient.cs:439)
-
-KeyNotFoundException: The given key was not present in the dictionary.
-2024-06-15 16:35:05,039 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-15 16:35:05,040 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
-
-CloseConnection(), errorCode: 1007
-2024-06-15 16:35:05,041 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-15 16:35:05,041 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
-
-CloseConnection(), errorCode: 1007
+2024-06-17 15:39:48,425 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-06-17 15:39:48,519 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-06-17 15:39:48,522 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-06-17 15:39:48,762 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-17 15:39:49,704 [ 1] INFO  Unity: Select Char:[1]¥Û≈£[Warrior]
+2024-06-17 15:39:50,550 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-06-17 15:39:50,579 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-06-17 15:39:50,580 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-06-17 15:39:50,582 [ 1] INFO  Unity: AddCharacter: 1: ¥Û≈£ Map: 1 Entity: (4:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-06-17 15:39:50,585 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-06-17 15:39:50,585 [ 1] INFO  Unity: OnMapCharacterEnter:1 [1]
+2024-06-17 15:39:50,586 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-06-17 15:39:51,013 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-17 15:39:51,421 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-17 15:42:34,379 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/MainPlayerCamera.cs(8,16): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
+2024-06-17 15:42:34,379 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/EntityController.cs(20,13): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
+2024-06-17 15:42:34,379 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/EntityController.cs(23,13): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
+2024-06-17 15:42:34,379 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/PlayerInputController.cs(107,8): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used

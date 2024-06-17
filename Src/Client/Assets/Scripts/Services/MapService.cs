@@ -17,13 +17,18 @@ namespace Services
         {
             MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
             MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
+
+            MessageDistributer.Instance.Subscribe<MapEntitySyncResponse>(this.OnMapEntitySync);
          }
 
-        public int CurrentMapId { get; private set; }
+        
+
+        public int CurrentMapId { get; set; }
 
         public void Dispose()
         {
             MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
+            MessageDistributer.Instance.Unsubscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
         }
 
         public void Init()
@@ -68,6 +73,35 @@ namespace Services
             }
             else
                 Debug.LogErrorFormat("EnterMap: Map {0} not existed", mapId);
+        }
+
+        public void SendMapEntitySync(EntityEvent entityEvent, NEntity entity)
+        {
+            Debug.LogFormat("MapEntitySyncRequest: ID: {0}, Pos: {1} DIR: {2} SPD: {3} ", entity.Id, entity.Position, entity.Direction, entity.Speed);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.mapEntitySync = new MapEntitySyncRequest();
+            message.Request.mapEntitySync.entitySync = new NEntitySync()
+            {
+                Id = entity.Id,
+                Event = entityEvent,
+                Entity = entity,
+            };
+            NetClient.Instance.SendMessage(message);
+        }
+
+        private void OnMapEntitySync(object sender, MapEntitySyncResponse response)
+        {
+           System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            sb.AppendFormat("MapEntityUpdateResponse: Entitys: {0}", response.entitySyncs.Count);
+            sb.AppendLine();
+            foreach(var entity in response.entitySyncs)
+            {
+                EntityManager.Instance.OnEntitySyncs(entity);
+                sb.AppendFormat("    [{0}]event: {1} entity: {2}", entity.Id, entity.Event, entity.Entity.String());
+                sb.AppendLine();
+            }
+            Debug.Log(sb.ToString());
         }
     }
 }
