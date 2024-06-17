@@ -76,10 +76,10 @@ namespace GameServer.Models
         ///角色离开地图
         ///</summary>
         ///<param name="character"></param>
-        internal void CharacterLeave(NCharacterInfo cha)
+        internal void CharacterLeave(Character cha)
         {
             Log.InfoFormat("CharacterLeave: Map:{0} characterId:{1}",this.Define.ID,cha.Id);
-            this.SendCharacterLeaveMap(MapCharacters[cha.Id].connection, cha);
+ 
             
             foreach (var kv in this.MapCharacters)
             {
@@ -102,7 +102,7 @@ namespace GameServer.Models
             connection.SendData(data, 0, data.Length);
         }
 
-        void SendCharacterLeaveMap(NetConnection<NetSession> connection, NCharacterInfo character)
+        void SendCharacterLeaveMap(NetConnection<NetSession> connection, Character character)
         {
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();

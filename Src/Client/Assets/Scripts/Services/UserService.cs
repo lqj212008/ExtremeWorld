@@ -272,6 +272,7 @@ namespace Services
 			if(response.Result == Result.Success)
 			{
 				MapService.Instance.CurrentMapId = 0;
+				User.Instance.CurrentCharacter = null;
 			}
 		}
 

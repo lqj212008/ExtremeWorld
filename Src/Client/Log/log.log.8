@@ -1,30 +1,36 @@
-2024-06-17 15:39:40,024 [ 1] INFO  Unity: LoadingManager start
-2024-06-17 15:39:43,143 [ 1] INFO  Unity: DataManager > DataManager()
-2024-06-17 15:39:48,411 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-17 15:39:48,413 [ 1] INFO  Unity: ConnectToServer() Start
-2024-06-17 15:39:48,416 [ 1] INFO  Unity: DoConnect
-2024-06-17 15:39:48,417 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-17 15:39:48,421 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-06-17 16:01:46,474 [ 1] INFO  Unity: LoadingManager start
+2024-06-17 16:01:49,572 [ 1] INFO  Unity: DataManager > DataManager()
+2024-06-17 16:01:54,996 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-06-17 16:01:54,997 [ 1] INFO  Unity: ConnectToServer() Start
+2024-06-17 16:01:55,002 [ 1] INFO  Unity: DoConnect
+2024-06-17 16:01:55,003 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-06-17 16:01:55,007 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-06-17 15:39:48,425 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-06-17 15:39:48,519 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-06-17 15:39:48,522 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-06-17 15:39:48,762 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-17 15:39:49,704 [ 1] INFO  Unity: Select Char:[1]大牛[Warrior]
-2024-06-17 15:39:50,550 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-17 15:39:50,579 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-06-17 15:39:50,580 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
-2024-06-17 15:39:50,582 [ 1] INFO  Unity: AddCharacter: 1: 大牛 Map: 1 Entity: (4:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-17 15:39:50,585 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-06-17 15:39:50,585 [ 1] INFO  Unity: OnMapCharacterEnter:1 [1]
-2024-06-17 15:39:50,586 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-06-17 15:39:51,013 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-17 15:39:51,421 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-17 15:42:34,379 [ 1] WARN  Unity: 
-Assets/Scripts/GameObject/MainPlayerCamera.cs(8,16): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
-2024-06-17 15:42:34,379 [ 1] WARN  Unity: 
-Assets/Scripts/GameObject/EntityController.cs(20,13): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
-2024-06-17 15:42:34,379 [ 1] WARN  Unity: 
-Assets/Scripts/GameObject/EntityController.cs(23,13): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
-2024-06-17 15:42:34,379 [ 1] WARN  Unity: 
-Assets/Scripts/GameObject/PlayerInputController.cs(107,8): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
+2024-06-17 16:01:55,011 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-06-17 16:01:55,109 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-06-17 16:01:55,115 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-06-17 16:01:55,371 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-17 16:01:56,306 [ 1] INFO  Unity: Select Char:[1]大牛[Warrior]
+2024-06-17 16:01:57,074 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-06-17 16:01:57,102 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-06-17 16:01:57,104 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-06-17 16:01:57,105 [ 1] INFO  Unity: AddCharacter: 1: 大牛 Map: 1 Entity: (7:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-06-17 16:01:57,108 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-06-17 16:01:57,109 [ 1] INFO  Unity: OnMapCharacterEnter:1 [1]
+2024-06-17 16:01:57,109 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-06-17 16:01:57,549 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-17 16:01:57,957 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-17 16:02:16,048 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-06-17 16:02:16,049 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+CloseConnection(), errorCode: 1007
+2024-06-17 16:02:16,052 [ 1] INFO  Unity: Character_1_大牛 OnDestroy: ID: 7 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
+2024-06-17 16:02:16,053 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-06-17 16:02:16,053 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+CloseConnection(), errorCode: 1007
+2024-06-17 16:02:16,054 [ 1] INFO  Unity: Character_1_大牛 OnDestroy: ID: 7 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0

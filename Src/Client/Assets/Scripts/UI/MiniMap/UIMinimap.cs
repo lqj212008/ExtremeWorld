@@ -31,12 +31,14 @@ public class UIMinimap : MonoBehaviour {
 		this.minimap.transform.localPosition = Vector3.zero;
         
         realSize = new Vector2Int(mapDefine.Size[0], mapDefine.Size[1]);
-		this.playerTransform  = User.Instance.CurrentCharacterObject.transform;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if(this.playerTransform == null) return;
+		if(this.playerTransform == null)
+		{
+			playerTransform = MinimapManager.Instance.PlayerTransform;
+		}
 
 		float pivotX = playerTransform.position.x / (realSize.x / 100);
 		float pivotY = playerTransform.position.z / (realSize.y / 100);
