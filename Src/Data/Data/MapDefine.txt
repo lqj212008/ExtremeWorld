@@ -21,8 +21,8 @@
     "Resource": "Map01",
     "Minimap": "luorisenl",
     "Size": [
-      8000,
-      8000
+      10000,
+      10000
     ]
   },
   "3": {
@@ -34,8 +34,8 @@
     "Resource": "Map02",
     "Minimap": "luorisenl",
     "Size": [
-      8000,
-      8000
+      10000,
+      10000
     ]
   },
   "4": {
@@ -47,8 +47,8 @@
     "Resource": "Map03",
     "Minimap": "luoriyuhui",
     "Size": [
-      8000,
-      8000
+      12100,
+      13300
     ]
   }
 }
