@@ -220,10 +220,9 @@ namespace GameServer.Services
         void OnGameLeave(NetConnection<NetSession> sender, UserGameLeaveRequest request)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("UserGameLeaveRequest: CharacterID: {0}: {1} Map: {2}",character.Id,character.Info.Name,character.Info.mapId);
+            Log.InfoFormat("UserGameLeaveRequest: CharacterID: {0}: {1} Map: {2}", character.Id, character.Info.Name, character.Info.mapId);
 
-            CharacterManager.Instance.RemoveCharacter(character.Id);
-            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            CharacterLeave(character);
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.gameLeave = new UserGameLeaveResponse();
@@ -233,7 +232,12 @@ namespace GameServer.Services
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
         }
-       
+
+         public void CharacterLeave(Character character)
+        {
+            CharacterManager.Instance.RemoveCharacter(character.Id);
+            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+        }
     }
   
 }

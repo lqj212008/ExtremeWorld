@@ -39,6 +39,7 @@ namespace Services
         private void OnMapCharacterEnter(object sender, MapCharacterEnterResponse message)
         {
             Debug.LogFormat("OnMapCharacterEnter:Map: {0} Count: {1}", message.mapId, message.Characters.Count);
+            
             foreach(var cha in message.Characters)
             {
                 if(User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == cha.Id)
@@ -51,6 +52,7 @@ namespace Services
             {
                 this.EnterMap(message.mapId);
                 this.CurrentMapId = message.mapId;
+                MinimapManager.Instance.UpdateMinimap();
             }
         }
 

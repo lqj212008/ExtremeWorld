@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Network;
+using Managers;
 
 
 
@@ -36,6 +37,9 @@ public class LoadingManager : MonoBehaviour {
 		//Init basic services
 		MapService.Instance.Init();
 		UserService.Instance.Init();
+
+
+		TestManager.Instance.Init();
 
 		//Fake Loading Simulate
 		for(float i = 50;i<100;)
