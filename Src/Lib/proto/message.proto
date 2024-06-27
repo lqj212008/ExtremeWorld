@@ -37,6 +37,13 @@ enum CHARACTER_STATE
 	MOVE = 1;
 }
 
+enum ITEM_TYPE
+{
+	NORMAL = 0;
+	MATERIAL = 1;
+	TASK = 2;
+}
+
 enum ENTITY_EVENT
 {
 	NONE = 0;
@@ -65,6 +72,14 @@ message NCharacterInfo {
 	int32 level = 6;
 	int32 mapId = 7;
 	NEntity entity = 8;
+
+	repeated NItemInfo Items = 10;
+}
+
+message NItemInfo
+{
+	int32 id = 1;
+	int32 count = 2;
 }
 
 message NVector3
@@ -193,6 +208,7 @@ message UserGameEnterRequest
 message UserGameEnterResponse {
 	RESULT result = 1;
 	string errormsg = 2;
+	NCharacterInfo character = 3;
 }
 
 message UserGameLeaveRequest

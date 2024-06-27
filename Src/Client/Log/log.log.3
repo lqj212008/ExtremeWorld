@@ -1,63 +1,59 @@
-2024-06-23 22:10:20,229 [ 1] INFO  Unity: LoadingManager start
-2024-06-23 22:10:23,419 [ 1] INFO  Unity: DataManager > DataManager()
-2024-06-23 22:10:28,876 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-23 22:10:28,877 [ 1] INFO  Unity: ConnectToServer() Start
-2024-06-23 22:10:28,891 [ 1] INFO  Unity: DoConnect
-2024-06-23 22:10:28,892 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-23 22:10:28,896 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-06-27 20:09:22,240 [ 1] INFO  Unity: LoadingManager start
+2024-06-27 20:09:25,364 [ 1] INFO  Unity: DataManager > DataManager()
+2024-06-27 20:09:31,379 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-06-27 20:09:31,381 [ 1] INFO  Unity: ConnectToServer() Start
+2024-06-27 20:09:31,384 [ 1] INFO  Unity: DoConnect
+2024-06-27 20:09:31,386 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-06-27 20:09:31,390 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-06-23 22:10:28,903 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-06-23 22:10:29,588 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-06-23 22:10:29,600 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-06-23 22:10:29,952 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-23 22:10:30,070 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-23 22:10:30,071 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-06-27 20:09:31,393 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-06-27 20:09:32,229 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-06-27 20:09:32,232 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-06-27 20:09:32,530 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-27 20:09:32,641 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-06-27 20:09:32,642 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
 CloseConnection(), errorCode: 1007
-2024-06-23 22:10:30,898 [ 1] INFO  Unity: Select Char:[1]大牛[Warrior]
-2024-06-23 22:10:31,587 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-23 22:10:31,616 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-06-23 22:10:31,617 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
-2024-06-23 22:10:31,619 [ 1] INFO  Unity: AddCharacter: 1: 大牛 Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-23 22:10:31,622 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-06-23 22:10:32,208 [ 1] WARN  Unity: 
-No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-2024-06-23 22:10:32,329 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-23 22:10:32,330 [ 1] INFO  Unity: Can't add component 'Animator' to DeliveryNPC2 because such a component is already added to the game object!
-2024-06-23 22:10:32,331 [ 1] FATAL Unity: UnityEngine.Renderer.get_sharedMaterial () (at D:/unity/Runtime/Export/GraphicsRenderers.bindings.cs:139)
-NPCController.Start () (at Assets/Scripts/GameObject/NPCController.cs:22)
+2024-06-27 20:09:34,675 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
+2024-06-27 20:09:37,076 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-06-27 20:17:03,848 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
 
-MissingComponentException: There is no 'SkinnedMeshRenderer' attached to the "DeliveryNPC2" game object, but a script is trying to access it.
-You probably need to add a SkinnedMeshRenderer to the game object "DeliveryNPC2". Or your script needs to check if the component is attached before using it.
-2024-06-23 22:10:32,332 [ 1] INFO  Unity: Can't add component 'Animator' to Treasure_poter because such a component is already added to the game object!
-2024-06-23 22:10:32,332 [ 1] FATAL Unity: UnityEngine.Renderer.get_sharedMaterial () (at D:/unity/Runtime/Export/GraphicsRenderers.bindings.cs:139)
-NPCController.Start () (at Assets/Scripts/GameObject/NPCController.cs:22)
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
 
-MissingComponentException: There is no 'SkinnedMeshRenderer' attached to the "Treasure_poter" game object, but a script is trying to access it.
-You probably need to add a SkinnedMeshRenderer to the game object "Treasure_poter". Or your script needs to check if the component is attached before using it.
-2024-06-23 22:10:32,333 [ 1] INFO  Unity: Can't add component 'Animator' to taskNPC because such a component is already added to the game object!
-2024-06-23 22:10:32,333 [ 1] FATAL Unity: UnityEngine.Renderer.get_sharedMaterial () (at D:/unity/Runtime/Export/GraphicsRenderers.bindings.cs:139)
-NPCController.Start () (at Assets/Scripts/GameObject/NPCController.cs:22)
+2024-06-27 20:17:03,849 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
 
-MissingComponentException: There is no 'SkinnedMeshRenderer' attached to the "taskNPC" game object, but a script is trying to access it.
-You probably need to add a SkinnedMeshRenderer to the game object "taskNPC". Or your script needs to check if the component is attached before using it.
-2024-06-23 22:10:32,333 [ 1] INFO  Unity: Can't add component 'Animator' to DeliveryNPC1 because such a component is already added to the game object!
-2024-06-23 22:10:32,333 [ 1] FATAL Unity: UnityEngine.Renderer.get_sharedMaterial () (at D:/unity/Runtime/Export/GraphicsRenderers.bindings.cs:139)
-NPCController.Start () (at Assets/Scripts/GameObject/NPCController.cs:22)
+CloseConnection(), errorCode: 1001
+2024-06-27 20:17:03,860 [ 1] INFO  Unity: DoConnect
+2024-06-27 20:17:03,861 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-06-27 20:17:03,862 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-MissingComponentException: There is no 'SkinnedMeshRenderer' attached to the "DeliveryNPC1" game object, but a script is trying to access it.
-You probably need to add a SkinnedMeshRenderer to the game object "DeliveryNPC1". Or your script needs to check if the component is attached before using it.
-2024-06-23 22:11:10,361 [ 1] WARN  Unity: 
-Assets/Scripts/GameObject/MainPlayerCamera.cs(8,16): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
-2024-06-23 22:11:10,361 [ 1] WARN  Unity: 
-Assets/Scripts/GameObject/NPCController.cs(11,22): warning CS0108: `NPCController.renderer' hides inherited member `UnityEngine.Component.renderer'. Use the new keyword if hiding was intended
-2024-06-23 22:11:10,362 [ 1] WARN  Unity: 
-Assets/Scripts/GameObject/EntityController.cs(20,13): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
-2024-06-23 22:11:10,362 [ 1] WARN  Unity: 
-Assets/Scripts/GameObject/EntityController.cs(23,13): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
-2024-06-23 22:11:10,362 [ 1] WARN  Unity: 
-Assets/Scripts/GameObject/PlayerInputController.cs(108,8): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
-2024-06-23 22:11:10,362 [ 1] WARN  Unity: 
-Assets/Editor/MapTools.cs(24,26): warning CS0219: The variable `allTeleporters' is assigned but its value is never used
+2024-06-27 20:17:05,902 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+CloseConnection(), errorCode: 1005
+2024-06-27 20:17:05,903 [ 1] ERROR Unity: UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
+
+DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+2024-06-27 20:17:08,201 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-06-27 20:17:08,202 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+
+CloseConnection(), errorCode: 1007

@@ -6,6 +6,7 @@ using Network;
 using SkillBridge.Message;
 using UnityEngine;
 using Models;
+using Managers;
 
 namespace Services
 {
@@ -253,7 +254,10 @@ namespace Services
 
 			if(response.Result == Result.Success) 
 			{
-                
+                if(response.Character != null)
+				{
+					ItemManager.Instance.Init(response.Character.Items);
+				}
             }
 		}
 
@@ -269,6 +273,7 @@ namespace Services
 		void OnGameLeave(object sender, UserGameLeaveResponse response)
 		{
 			Debug.LogFormat("OnGameLeave: {0} [{1}]", response.Result, response.Errormsg);
+			UIMinimap.Destroy(MinimapManager.Instance.minimap);
 			if(response.Result == Result.Success)
 			{
 				MapService.Instance.CurrentMapId = 0;

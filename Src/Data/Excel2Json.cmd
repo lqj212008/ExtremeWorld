@@ -6,5 +6,6 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\SpawnRuleDefine.txt ..\Client\Data\
 @copy Data\NPCDefine.txt ..\Client\Data\
 @copy Data\TeleporterDefine.txt ..\Client\Data\
+@copy Data\ItemDefine.txt ..\Client\Data\
 
 pause

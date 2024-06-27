@@ -22,5 +22,10 @@ namespace GameServer.Services
             entities = new ExtremeWorldEntities();
             Log.Info("DBService has been started");
         }
+
+        public void Save()
+        {
+            entities.SaveChangesAsync();
+        }
     }
 }

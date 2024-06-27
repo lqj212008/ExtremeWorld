@@ -48,4 +48,5 @@ public class UIMinimap : MonoBehaviour {
 
 		this.arrow.transform.eulerAngles = new Vector3(0, 0, -playerTransform.eulerAngles.y);
 	}
+	
 }

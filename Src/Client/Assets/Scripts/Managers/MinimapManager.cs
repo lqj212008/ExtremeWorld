@@ -38,6 +38,8 @@ namespace Managers
 			if(this.minimap != null)
 				this.minimap.UpdateMap();
 		}
+
+		
 	}
 }
 

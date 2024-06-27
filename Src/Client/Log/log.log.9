@@ -1,108 +1,64 @@
-2024-06-22 15:23:14,251 [ 1] INFO  Unity: LoadingManager start
-2024-06-22 15:23:17,384 [ 1] INFO  Unity: DataManager > DataManager()
-2024-06-22 15:23:22,764 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-22 15:23:22,766 [ 1] INFO  Unity: ConnectToServer() Start
-2024-06-22 15:23:22,770 [ 1] INFO  Unity: DoConnect
-2024-06-22 15:23:22,772 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-22 15:23:22,775 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-06-27 19:21:26,512 [ 1] INFO  Unity: LoadingManager start
+2024-06-27 19:21:29,817 [ 1] INFO  Unity: DataManager > DataManager()
+2024-06-27 19:21:36,414 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-06-27 19:21:36,415 [ 1] INFO  Unity: ConnectToServer() Start
+2024-06-27 19:21:36,419 [ 1] INFO  Unity: DoConnect
+2024-06-27 19:21:36,421 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-06-27 19:21:36,425 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-06-22 15:23:22,778 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-06-22 15:23:22,873 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-06-22 15:23:22,877 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-06-22 15:23:23,162 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-22 15:23:23,272 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-22 15:23:23,273 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-06-27 19:21:36,428 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-06-27 19:21:37,365 [ 1] INFO  Unity: OnUserLogin: Failed  [用户不存在]
+2024-06-27 19:21:50,265 [ 1] INFO  Unity: UserRegisterRequest::user: 123 psw: 123
+2024-06-27 19:21:50,321 [ 1] INFO  Unity: OnUserRegister: Success  [None]
+2024-06-27 19:21:55,633 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-06-27 19:21:55,681 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-06-27 19:21:55,683 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-06-27 19:21:56,328 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-27 19:21:56,439 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-06-27 19:21:56,439 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
 CloseConnection(), errorCode: 1007
-2024-06-22 15:23:24,105 [ 1] INFO  Unity: Select Char:[1]大牛[Warrior]
-2024-06-22 15:23:24,859 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-22 15:23:24,890 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-06-22 15:23:24,891 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
-2024-06-22 15:23:24,893 [ 1] INFO  Unity: AddCharacter: 3: 大牛 Map: 1 Entity: (3:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-22 15:23:24,896 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-06-22 15:23:25,368 [ 1] WARN  Unity: 
+2024-06-27 19:22:10,317 [ 1] INFO  Unity: SendCharacterCreate::charName:哈哈 Class:Warrior
+2024-06-27 19:22:10,360 [ 1] INFO  Unity: OnUserCreateCharacter:Success None
+2024-06-27 19:22:23,904 [ 1] INFO  Unity: SendCharacterCreate::charName:天天 Class:Wizard
+2024-06-27 19:22:23,931 [ 1] INFO  Unity: OnUserCreateCharacter:Success None
+2024-06-27 19:22:31,765 [ 1] INFO  Unity: SendCharacterCreate::charName:里丽 Class:Archer
+2024-06-27 19:22:31,791 [ 1] INFO  Unity: OnUserCreateCharacter:Success None
+2024-06-27 19:22:32,974 [ 1] INFO  Unity: Select Char:[0]天天[Wizard]
+2024-06-27 19:22:33,398 [ 1] INFO  Unity: Select Char:[0]哈哈[Warrior]
+2024-06-27 19:22:34,146 [ 1] INFO  Unity: Select Char:[0]天天[Wizard]
+2024-06-27 19:22:34,650 [ 1] INFO  Unity: Select Char:[0]哈哈[Warrior]
+2024-06-27 19:22:35,686 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-06-27 19:22:35,756 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-06-27 19:22:35,766 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-06-27 19:22:35,768 [ 1] INFO  Unity: AddCharacter: 1: 哈哈 Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-06-27 19:22:35,772 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-06-27 19:22:36,685 [ 1] WARN  Unity: 
 No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-2024-06-22 15:23:25,479 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-22 15:23:59,341 [ 1] INFO  Unity: SetDirection: (98, -17, 0)
-2024-06-22 15:23:59,342 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:23:59,449 [ 1] INFO  Unity: SetDirection: (94, -35, 0)
-2024-06-22 15:23:59,450 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:23:59,528 [ 1] INFO  Unity: SetDirection: (86, -51, 0)
-2024-06-22 15:23:59,529 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:23:59,633 [ 1] INFO  Unity: SetDirection: (74, -68, 0)
-2024-06-22 15:23:59,634 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:23:59,660 [ 1] INFO  Unity: MoveForward
-2024-06-22 15:23:59,661 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:23:59,726 [ 1] INFO  Unity: SetDirection: (58, -81, 0)
-2024-06-22 15:23:59,726 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:23:59,819 [ 1] INFO  Unity: SetDirection: (43, -90, 0)
-2024-06-22 15:23:59,819 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:23:59,898 [ 1] INFO  Unity: SetDirection: (27, -96, 0)
-2024-06-22 15:23:59,899 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:23:59,977 [ 1] INFO  Unity: SetDirection: (10, -100, 0)
-2024-06-22 15:23:59,978 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:00,071 [ 1] INFO  Unity: SetDirection: (-8, -100, 0)
-2024-06-22 15:24:00,072 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:00,165 [ 1] INFO  Unity: SetDirection: (-28, -96, 0)
-2024-06-22 15:24:00,166 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:00,246 [ 1] INFO  Unity: SetDirection: (-45, -90, 0)
-2024-06-22 15:24:00,246 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:00,344 [ 1] INFO  Unity: SetDirection: (-60, -80, 0)
-2024-06-22 15:24:00,345 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:02,234 [ 1] INFO  Unity: SetDirection: (-73, -68, 0)
-2024-06-22 15:24:02,235 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:03,069 [ 1] INFO  Unity: Stop
-2024-06-22 15:24:03,070 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:05,374 [ 1] INFO  Unity: MoveForward
-2024-06-22 15:24:05,374 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:05,427 [ 1] INFO  Unity: SetDirection: (-85, -53, 0)
-2024-06-22 15:24:05,428 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:05,639 [ 1] INFO  Unity: SetDirection: (-93, -37, 0)
-2024-06-22 15:24:05,640 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:08,096 [ 1] INFO  Unity: SetDirection: (-98, -18, 0)
-2024-06-22 15:24:08,097 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:10,762 [ 1] INFO  Unity: SetPosition: (2980, 2730, 801)
-2024-06-22 15:24:10,762 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:13,373 [ 1] INFO  Unity: SetDirection: (-100, -1, 0)
-2024-06-22 15:24:13,373 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:15,719 [ 1] INFO  Unity: TeleporterObject: Character [[0]] Enter Teleporter [3: 主城传入点1]
-2024-06-22 15:24:18,198 [ 1] INFO  Unity: TeleporterObject: Character [[0]] Enter Teleporter [1: 主城->野外]
-2024-06-22 15:24:18,199 [ 1] INFO  Unity: MapTeleportRequest: teleporterID: 1
-2024-06-22 15:24:18,226 [ 1] INFO  Unity: OnMapCharacterLeave: CharID: 3
-2024-06-22 15:24:18,228 [ 1] INFO  Unity: RemoveCharacter:3
-2024-06-22 15:24:18,230 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 2 Count: 1
-2024-06-22 15:24:18,231 [ 1] INFO  Unity: AddCharacter: 3: 大牛 Map: 2 Entity: (3:pos:(2697,3998,91),dir:(0,100,0),spd:300
-2024-06-22 15:24:18,239 [ 1] INFO  Unity: LoadLevel: Map01
-2024-06-22 15:24:18,460 [ 1] INFO  Unity: Character_3_大牛 OnDestroy: ID: 3 POS: (745, 2573, 801) DIR: (-100, -1, 0) SPD: 300
-2024-06-22 15:24:18,474 [ 1] INFO  Unity: MoveForward
-2024-06-22 15:24:18,476 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-06-22 15:24:18,603 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-22 15:24:18,604 [ 1] INFO  Unity: Stop
-2024-06-22 15:24:18,606 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:19,008 [ 1] INFO  Unity: SetPosition: (2697, 4029, 10)
-2024-06-22 15:24:19,008 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:19,444 [ 1] INFO  Unity: SetDirection: (18, 98, 0)
-2024-06-22 15:24:19,444 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:19,537 [ 1] INFO  Unity: SetDirection: (35, 94, 0)
-2024-06-22 15:24:19,537 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:19,616 [ 1] INFO  Unity: SetDirection: (51, 86, 0)
-2024-06-22 15:24:19,617 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:19,708 [ 1] INFO  Unity: SetDirection: (65, 76, 0)
-2024-06-22 15:24:19,708 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:19,788 [ 1] INFO  Unity: SetDirection: (77, 63, 0)
-2024-06-22 15:24:19,789 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:19,866 [ 1] INFO  Unity: SetDirection: (87, 49, 0)
-2024-06-22 15:24:19,867 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:19,973 [ 1] INFO  Unity: SetDirection: (95, 30, 0)
-2024-06-22 15:24:19,974 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:20,105 [ 1] INFO  Unity: SetDirection: (99, 13, 0)
-2024-06-22 15:24:20,106 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 3, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-06-22 15:24:21,811 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-22 15:24:21,811 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+2024-06-27 19:22:36,815 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-27 19:31:38,321 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-06-27 19:31:38,331 [ 1] INFO  Unity: UserGameLeaveRequest
+2024-06-27 19:31:38,356 [ 1] INFO  Unity: OnMapCharacterLeave: CharID: 1
+2024-06-27 19:31:38,357 [ 1] INFO  Unity: RemoveCharacter:1
+2024-06-27 19:31:38,359 [ 1] INFO  Unity: OnGameLeave: Success [None]
+2024-06-27 19:31:38,360 [ 1] INFO  Unity: Character_1_哈哈 OnDestroy: ID: 1 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
+2024-06-27 19:31:38,470 [ 1] FATAL Unity: UIMinimap.Update () (at Assets/Scripts/UI/MiniMap/UIMinimap.cs:43)
 
-CloseConnection(), errorCode: 1007
-2024-06-22 15:24:21,812 [ 1] INFO  Unity: Character_3_大牛 OnDestroy: ID: 3 POS: (2697, 4029, 10) DIR: (99, 13, 0) SPD: 0
+NullReferenceException: Object reference not set to an instance of an object
+2024-06-27 19:31:38,556 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-06-27 19:36:33,185 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/MainPlayerCamera.cs(8,16): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
+2024-06-27 19:36:33,185 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/NPCController.cs(11,22): warning CS0108: `NPCController.renderer' hides inherited member `UnityEngine.Component.renderer'. Use the new keyword if hiding was intended
+2024-06-27 19:36:33,187 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/EntityController.cs(20,13): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
+2024-06-27 19:36:33,187 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/EntityController.cs(23,13): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
+2024-06-27 19:36:33,187 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/NPCController.cs(14,8): warning CS0414: The private field `NPCController.orignColor' is assigned but its value is never used
+2024-06-27 19:36:33,187 [ 1] WARN  Unity: 
+Assets/Scripts/GameObject/PlayerInputController.cs(108,8): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
+2024-06-27 19:36:33,187 [ 1] WARN  Unity: 
+Assets/Editor/MapTools.cs(24,26): warning CS0219: The variable `allTeleporters' is assigned but its value is never used
