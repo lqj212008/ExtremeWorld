@@ -129,6 +129,14 @@ namespace GameServer.Services
                 MapPosZ = 820,
             };
 
+#if DEBUG
+            var bag = new TCharacterBag();
+            bag.Owner = character;
+            bag.Items = new byte[0];
+            bag.Unlocked = 20;
+            character.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
+#endif
+
             try
             {
                 character = DBService.Instance.Entities.Characters.Add(character);
@@ -213,20 +221,25 @@ namespace GameServer.Services
             message.Response.gameEnter.Character = character.Info;
 
 #if DEBUG
-            ////道具系统测试
-            //int itemID = 1;
-            //bool hasItem = character.ItemManager.HasItem(itemID);
-            //Log.InfoFormat("HasItem:[{0}]{1}", itemID, hasItem);
-            //if (hasItem)
-            //{
-            //    character.ItemManager.RemoveItem(itemID, 1);
-            //}
-            //else
-            //{
-            //    character.ItemManager.AddItem(itemID, 2);
-            //}
-            //Models.Item item = character.ItemManager.GetItem(itemID);
-            //Log.InfoFormat("Item:[{0}][{1}]", itemID, item);
+            //道具系统测试
+            int itemID = 1;
+            bool hasItem = character.ItemManager.HasItem(itemID);
+            Log.InfoFormat("HasItem:[{0}]{1}", itemID, hasItem);
+            if (hasItem)
+            {
+                //character.ItemManager.RemoveItem(itemID, 1);
+                character.ItemManager.AddItem(1, 200);
+                character.ItemManager.AddItem(2, 100);
+                character.ItemManager.AddItem(3, 30);
+                character.ItemManager.AddItem(4, 120);
+            }
+            else
+            {
+                character.ItemManager.AddItem(itemID, 2);
+            }
+            Models.Item item = character.ItemManager.GetItem(itemID);
+            Log.InfoFormat("Item:[{0}][{1}]", itemID, item);
+            DBService.Instance.Save();
 #endif
 
             byte[] data = PackageHandler.PackMessage(message);

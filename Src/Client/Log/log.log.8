@@ -1,50 +1,40 @@
-2024-06-27 19:37:15,640 [ 1] INFO  Unity: LoadingManager start
-2024-06-27 19:37:19,375 [ 1] INFO  Unity: DataManager > DataManager()
-2024-06-27 19:37:25,121 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-27 19:37:25,122 [ 1] INFO  Unity: ConnectToServer() Start
-2024-06-27 19:37:25,126 [ 1] INFO  Unity: DoConnect
-2024-06-27 19:37:25,127 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-27 19:37:25,130 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-07-02 00:19:22,122 [ 1] INFO  Unity: LoadingManager start
+2024-07-02 00:19:26,818 [ 1] INFO  Unity: DataManager > DataManager()
+2024-07-02 00:19:33,648 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-07-02 00:19:33,656 [ 1] INFO  Unity: ConnectToServer() Start
+2024-07-02 00:19:33,666 [ 1] INFO  Unity: DoConnect
+2024-07-02 00:19:33,668 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-02 00:19:33,680 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-06-27 19:37:25,134 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-06-27 19:37:40,749 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-27 19:37:43,029 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-27 19:37:43,884 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-27 19:38:06,632 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
-
-2024-06-27 19:38:06,633 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-07-02 00:19:33,695 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-07-02 00:19:33,956 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-07-02 00:19:33,968 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-07-02 00:19:34,323 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-02 00:19:34,743 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-02 00:19:34,744 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
-CloseConnection(), errorCode: 1001
-2024-06-27 19:38:06,643 [ 1] INFO  Unity: DoConnect
-2024-06-27 19:38:06,644 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-27 19:38:06,645 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+CloseConnection(), errorCode: 1007
+2024-07-02 00:19:35,730 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
+2024-07-02 00:19:37,470 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-02 00:19:37,514 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-02 00:19:37,522 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:802]
+2024-07-02 00:19:37,522 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:400]
+2024-07-02 00:19:37,523 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:120]
+2024-07-02 00:19:37,524 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:480]
+2024-07-02 00:19:37,535 [ 1] ERROR Unity: Message handler exception:, Array index is out of range., Assembly-CSharp,   at Managers.BagManager.Reset () [0x00102] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Managers\BagManager.cs:54 
+  at Managers.BagManager.Init (SkillBridge.Message.NBagInfo info) [0x00070] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Managers\BagManager.cs:30 
+  at Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x00065] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Services\UserService.cs:260 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00000] in <filename unknown>:0 
+2024-07-02 00:19:37,537 [ 1] FATAL Unity: Managers.BagManager.Reset () (at Assets/Scripts/Managers/BagManager.cs:54)
+Managers.BagManager.Init (SkillBridge.Message.NBagInfo info) (at Assets/Scripts/Managers/BagManager.cs:30)
+Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:260)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg)
 
-2024-06-27 19:38:08,678 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-CloseConnection(), errorCode: 1005
-2024-06-27 19:38:08,678 [ 1] ERROR Unity: UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-2024-06-27 19:38:19,088 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-27 19:38:19,088 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+IndexOutOfRangeException: Array index is out of range.
+2024-07-02 00:21:54,635 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-02 00:21:54,635 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 

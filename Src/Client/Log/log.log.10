@@ -1,48 +1,31 @@
-2024-06-27 19:19:08,567 [ 1] INFO  Unity: LoadingManager start
-2024-06-27 19:19:11,906 [ 1] INFO  Unity: DataManager > DataManager()
-2024-06-27 19:19:28,083 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-27 19:19:28,084 [ 1] INFO  Unity: ConnectToServer() Start
-2024-06-27 19:19:28,099 [ 1] INFO  Unity: DoConnect
-2024-06-27 19:19:28,101 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-27 19:19:28,105 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-07-01 23:13:02,811 [ 1] INFO  Unity: LoadingManager start
+2024-07-01 23:13:06,915 [ 1] INFO  Unity: DataManager > DataManager()
+2024-07-01 23:13:12,289 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-07-01 23:13:12,297 [ 1] INFO  Unity: ConnectToServer() Start
+2024-07-01 23:13:12,308 [ 1] INFO  Unity: DoConnect
+2024-07-01 23:13:12,310 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-01 23:13:12,319 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-06-27 19:19:28,110 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-06-27 19:19:56,098 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
-
-2024-06-27 19:19:56,108 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
-
-CloseConnection(), errorCode: 1001
-2024-06-27 19:19:56,115 [ 1] INFO  Unity: DoConnect
-2024-06-27 19:19:56,116 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-27 19:19:56,117 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2024-06-27 19:19:58,161 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-CloseConnection(), errorCode: 1005
-2024-06-27 19:19:58,162 [ 1] ERROR Unity: UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-2024-06-27 19:21:22,512 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-27 19:21:22,512 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-07-01 23:13:12,335 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-07-01 23:13:12,999 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-07-01 23:13:13,010 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-07-01 23:13:13,321 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-01 23:13:13,722 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-01 23:13:13,723 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
 CloseConnection(), errorCode: 1007
+2024-07-01 23:13:14,667 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
+2024-07-01 23:13:19,326 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-01 23:13:19,462 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-01 23:13:19,468 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:202]
+2024-07-01 23:13:19,469 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:100]
+2024-07-01 23:13:19,470 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:30]
+2024-07-01 23:13:19,470 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:120]
+2024-07-01 23:13:19,477 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-07-01 23:13:19,485 [ 1] INFO  Unity: AddCharacter: 1: 哈哈 Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-01 23:13:19,499 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-07-01 23:13:20,042 [ 1] WARN  Unity: 
+No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2024-07-01 23:13:20,170 [ 1] INFO  Unity: LevelLoadCompleted:1

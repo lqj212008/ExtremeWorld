@@ -1,78 +1,123 @@
-2024-06-27 20:24:52,853 [ 1] INFO  Unity: LoadingManager start
-2024-06-27 20:24:56,130 [ 1] INFO  Unity: DataManager > DataManager()
-2024-06-27 20:25:02,032 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-27 20:25:02,034 [ 1] INFO  Unity: ConnectToServer() Start
-2024-06-27 20:25:02,037 [ 1] INFO  Unity: DoConnect
-2024-06-27 20:25:02,039 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-27 20:25:02,042 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-07-02 01:02:40,524 [ 1] INFO  Unity: LoadingManager start
+2024-07-02 01:02:44,520 [ 1] INFO  Unity: DataManager > DataManager()
+2024-07-02 01:02:49,683 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-07-02 01:02:49,684 [ 1] INFO  Unity: ConnectToServer() Start
+2024-07-02 01:02:49,689 [ 1] INFO  Unity: DoConnect
+2024-07-02 01:02:49,690 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-02 01:02:49,694 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-06-27 20:25:02,046 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-06-27 20:25:02,855 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-06-27 20:25:02,859 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-06-27 20:25:03,137 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-27 20:25:03,241 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-27 20:25:03,241 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+2024-07-02 01:02:49,698 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-07-02 01:02:50,224 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-07-02 01:02:50,234 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-07-02 01:02:50,527 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+Network.NetClient[15080] Awake
+2024-07-02 01:02:50,546 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-02 01:02:50,652 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-02 01:02:50,653 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
-2024-06-27 20:25:04,056 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
-2024-06-27 20:25:05,023 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-27 20:25:08,530 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-06-27 20:25:08,531 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
-2024-06-27 20:25:08,533 [ 1] INFO  Unity: AddCharacter: 1: 哈哈 Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-27 20:25:08,535 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-06-27 20:25:09,088 [ 1] WARN  Unity: 
+2024-07-02 01:02:51,613 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
+2024-07-02 01:02:53,259 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-02 01:02:53,370 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-02 01:02:53,371 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:602]
+2024-07-02 01:02:53,372 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:300]
+2024-07-02 01:02:53,372 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:90]
+2024-07-02 01:02:53,372 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:360]
+2024-07-02 01:02:53,375 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-07-02 01:02:53,376 [ 1] INFO  Unity: AddCharacter: 1: 哈哈 Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-02 01:02:53,379 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-07-02 01:02:54,230 [ 1] WARN  Unity: 
 No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-2024-06-27 20:25:09,204 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-27 20:25:21,344 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-06-27 20:25:21,345 [ 1] INFO  Unity: UserGameLeaveRequest
-2024-06-27 20:25:21,372 [ 1] INFO  Unity: OnMapCharacterLeave: CharID: 1
-2024-06-27 20:25:21,374 [ 1] INFO  Unity: RemoveCharacter:1
-2024-06-27 20:25:21,376 [ 1] INFO  Unity: OnGameLeave: Success [None]
-2024-06-27 20:25:21,376 [ 1] INFO  Unity: Character_1_哈哈 OnDestroy: ID: 1 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
-2024-06-27 20:25:21,884 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-27 20:25:21,889 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-27 20:25:21,890 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+2024-07-02 01:02:54,338 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+GameObjectManager[18136] Awake
+2024-07-02 01:02:54,342 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIWorldElementManager[19348] Awake
+2024-07-02 01:02:54,343 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+MainPlayerCamera[20030] Awake
+2024-07-02 01:02:54,343 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIMain[20300] Awake
+2024-07-02 01:02:54,368 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-02 01:02:59,805 [ 1] INFO  Unity: SetDirection: (98, -17, 0)
+2024-07-02 01:02:59,806 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 01:02:59,914 [ 1] INFO  Unity: SetDirection: (94, -35, 0)
+2024-07-02 01:02:59,914 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 01:02:59,992 [ 1] INFO  Unity: SetDirection: (86, -51, 0)
+2024-07-02 01:02:59,993 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 01:03:00,099 [ 1] INFO  Unity: SetDirection: (74, -68, 0)
+2024-07-02 01:03:00,099 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 01:03:00,501 [ 1] INFO  Unity: SetDirection: (58, -81, 0)
+2024-07-02 01:03:00,502 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 01:03:00,504 [ 1] INFO  Unity: SetDirection: (43, -90, 0)
+2024-07-02 01:03:00,504 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 01:03:00,547 [ 1] INFO  Unity: MoveForward
+2024-07-02 01:03:00,548 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 01:03:00,613 [ 1] INFO  Unity: SetDirection: (25, -97, 0)
+2024-07-02 01:03:00,614 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 01:03:01,115 [ 1] INFO  Unity: SetDirection: (7, -100, 0)
+2024-07-02 01:03:01,115 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 01:03:01,247 [ 1] INFO  Unity: SetDirection: (-12, -99, 0)
+2024-07-02 01:03:01,247 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 01:03:01,353 [ 1] INFO  Unity: SetDirection: (-31, -95, 0)
+2024-07-02 01:03:01,354 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 01:03:01,432 [ 1] INFO  Unity: SetDirection: (-47, -88, 0)
+2024-07-02 01:03:01,433 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 01:03:01,538 [ 1] INFO  Unity: SetDirection: (-63, -78, 0)
+2024-07-02 01:03:01,538 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 01:03:01,737 [ 1] INFO  Unity: SetDirection: (-76, -65, 0)
+2024-07-02 01:03:01,738 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 01:03:02,283 [ 1] INFO  Unity: SetDirection: (-62, -78, 0)
+2024-07-02 01:03:02,284 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 01:03:03,729 [ 1] INFO  Unity: Stop
+2024-07-02 01:03:03,730 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 1, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 01:03:54,030 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:337 
+
+2024-07-02 01:03:54,031 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:351)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:431)
+
+CloseConnection(), errorCode: 1001
+2024-07-02 01:03:54,044 [ 1] INFO  Unity: DoConnect
+2024-07-02 01:03:54,044 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-02 01:03:54,046 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2024-07-02 01:03:56,087 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:271)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:166)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:312)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:429)
+
+CloseConnection(), errorCode: 1005
+2024-07-02 01:03:56,088 [ 1] ERROR Unity: UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:273)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:166)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:312)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:429)
+
+DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+2024-07-02 01:03:56,885 [ 1] INFO  Unity: Character_1_哈哈 OnDestroy: ID: 1 POS: (4583, 3220, 820) DIR: (-62, -78, 0) SPD: 0
+2024-07-02 01:03:56,886 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-02 01:03:56,886 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
-2024-06-27 20:25:23,365 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
-2024-06-27 20:25:25,181 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-27 20:25:27,855 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-06-27 20:25:27,856 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
-2024-06-27 20:25:27,857 [ 1] INFO  Unity: AddCharacter: 2: 哈哈 Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-27 20:25:27,858 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-06-27 20:25:28,382 [ 1] WARN  Unity: 
-No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-2024-06-27 20:25:28,494 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-27 20:25:40,133 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-06-27 20:25:40,134 [ 1] INFO  Unity: UserGameLeaveRequest
-2024-06-27 20:25:40,160 [ 1] INFO  Unity: OnMapCharacterLeave: CharID: 2
-2024-06-27 20:25:40,161 [ 1] INFO  Unity: RemoveCharacter:2
-2024-06-27 20:25:40,161 [ 1] INFO  Unity: OnGameLeave: Success [None]
-2024-06-27 20:25:40,252 [ 1] INFO  Unity: Character_2_哈哈 OnDestroy: ID: 2 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
-2024-06-27 20:25:40,386 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-27 20:25:40,391 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-27 20:25:40,392 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
-
-CloseConnection(), errorCode: 1007
-2024-06-27 20:25:41,353 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
-2024-06-27 20:25:42,292 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-27 20:25:44,868 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-06-27 20:25:44,870 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
-2024-06-27 20:25:44,870 [ 1] INFO  Unity: AddCharacter: 3: 哈哈 Map: 1 Entity: (3:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-06-27 20:25:44,872 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-06-27 20:25:45,393 [ 1] WARN  Unity: 
-No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-2024-06-27 20:25:45,499 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-27 20:25:54,236 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-27 20:25:54,237 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
-
-CloseConnection(), errorCode: 1007
-2024-06-27 20:25:54,237 [ 1] INFO  Unity: Character_3_哈哈 OnDestroy: ID: 3 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0

@@ -1,58 +1,135 @@
-2024-06-27 20:20:36,125 [ 1] INFO  Unity: LoadingManager start
-2024-06-27 20:20:39,560 [ 1] INFO  Unity: DataManager > DataManager()
-2024-06-27 20:20:45,629 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-06-27 20:20:45,630 [ 1] INFO  Unity: ConnectToServer() Start
-2024-06-27 20:20:45,633 [ 1] INFO  Unity: DoConnect
-2024-06-27 20:20:45,636 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-27 20:20:45,639 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-07-02 00:47:43,105 [ 1] INFO  Unity: LoadingManager start
+2024-07-02 00:47:46,688 [ 1] INFO  Unity: DataManager > DataManager()
+2024-07-02 00:47:54,332 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-07-02 00:47:54,334 [ 1] INFO  Unity: ConnectToServer() Start
+2024-07-02 00:47:54,337 [ 1] INFO  Unity: DoConnect
+2024-07-02 00:47:54,338 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-02 00:47:54,342 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-06-27 20:20:45,643 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-06-27 20:20:46,183 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-06-27 20:20:46,187 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-06-27 20:20:46,475 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-06-27 20:20:46,576 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-27 20:20:46,577 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-07-02 00:47:54,346 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-07-02 00:47:54,441 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-07-02 00:47:54,445 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-07-02 00:47:55,048 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-02 00:47:55,155 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-02 00:47:55,155 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 
 CloseConnection(), errorCode: 1007
-2024-06-27 20:21:45,144 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
-2024-06-27 20:21:46,318 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-06-27 20:24:16,278 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Network\NetClient.cs:340 
-
-2024-06-27 20:24:16,278 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:354)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:434)
-
-CloseConnection(), errorCode: 1001
-2024-06-27 20:24:16,289 [ 1] INFO  Unity: DoConnect
-2024-06-27 20:24:16,290 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-06-27 20:24:16,291 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2024-06-27 20:24:18,342 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:274)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-CloseConnection(), errorCode: 1005
-2024-06-27 20:24:18,343 [ 1] ERROR Unity: UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:276)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:169)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:315)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:432)
-
-DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-2024-06-27 20:24:42,100 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-06-27 20:24:42,101 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-07-02 00:47:55,916 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
+2024-07-02 00:47:57,120 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-02 00:47:57,151 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-02 00:47:57,153 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:402]
+2024-07-02 00:47:57,153 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:200]
+2024-07-02 00:47:57,154 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:60]
+2024-07-02 00:47:57,155 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:240]
+2024-07-02 00:47:57,157 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-07-02 00:47:57,158 [ 1] INFO  Unity: AddCharacter: 4: 哈哈 Map: 1 Entity: (4:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-02 00:47:57,160 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-07-02 00:47:57,999 [ 1] WARN  Unity: 
+No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2024-07-02 00:47:58,112 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-02 00:48:04,153 [ 1] INFO  Unity: SetDirection: (98, -20, 0)
+2024-07-02 00:48:04,154 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:04,248 [ 1] INFO  Unity: SetDirection: (92, -38, 0)
+2024-07-02 00:48:04,248 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:04,354 [ 1] INFO  Unity: SetDirection: (83, -56, 0)
+2024-07-02 00:48:04,354 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:04,368 [ 1] INFO  Unity: MoveForward
+2024-07-02 00:48:04,369 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:04,433 [ 1] INFO  Unity: SetDirection: (71, -70, 0)
+2024-07-02 00:48:04,433 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:04,527 [ 1] INFO  Unity: SetDirection: (55, -83, 0)
+2024-07-02 00:48:04,528 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:04,632 [ 1] INFO  Unity: SetDirection: (37, -93, 0)
+2024-07-02 00:48:04,633 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:04,738 [ 1] INFO  Unity: SetDirection: (18, -98, 0)
+2024-07-02 00:48:04,739 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:04,870 [ 1] INFO  Unity: SetDirection: (0, -100, 0)
+2024-07-02 00:48:04,870 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:06,026 [ 1] INFO  Unity: SetDirection: (-18, -98, 0)
+2024-07-02 00:48:06,026 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:06,145 [ 1] INFO  Unity: SetDirection: (-38, -93, 0)
+2024-07-02 00:48:06,145 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:06,244 [ 1] INFO  Unity: SetDirection: (-56, -83, 0)
+2024-07-02 00:48:06,244 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:06,378 [ 1] INFO  Unity: SetDirection: (-70, -72, 0)
+2024-07-02 00:48:06,378 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:08,562 [ 1] INFO  Unity: SetPosition: (4623, 3131, 801)
+2024-07-02 00:48:08,562 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:08,985 [ 1] INFO  Unity: SetDirection: (-82, -58, 0)
+2024-07-02 00:48:08,986 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:09,104 [ 1] INFO  Unity: SetDirection: (-91, -41, 0)
+2024-07-02 00:48:09,105 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:09,196 [ 1] INFO  Unity: SetDirection: (-97, -25, 0)
+2024-07-02 00:48:09,198 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:09,289 [ 1] INFO  Unity: SetDirection: (-100, -6, 0)
+2024-07-02 00:48:09,290 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:09,461 [ 1] INFO  Unity: SetDirection: (-99, 12, 0)
+2024-07-02 00:48:09,462 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:10,163 [ 1] INFO  Unity: SetDirection: (-100, -7, 0)
+2024-07-02 00:48:10,163 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:11,884 [ 1] INFO  Unity: Stop
+2024-07-02 00:48:11,884 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:12,294 [ 1] INFO  Unity: MoveForward
+2024-07-02 00:48:12,294 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:13,043 [ 1] INFO  Unity: Stop
+2024-07-02 00:48:13,044 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:13,189 [ 1] INFO  Unity: MoveBack
+2024-07-02 00:48:13,190 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
+2024-07-02 00:48:13,878 [ 1] INFO  Unity: Stop
+2024-07-02 00:48:13,879 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:13,904 [ 1] INFO  Unity: MoveForward
+2024-07-02 00:48:13,904 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:14,580 [ 1] INFO  Unity: Stop
+2024-07-02 00:48:14,580 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:15,056 [ 1] INFO  Unity: MoveForward
+2024-07-02 00:48:15,057 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:15,308 [ 1] INFO  Unity: Stop
+2024-07-02 00:48:15,310 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:15,507 [ 1] INFO  Unity: MoveForward
+2024-07-02 00:48:15,507 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:15,917 [ 1] INFO  Unity: Stop
+2024-07-02 00:48:15,918 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:16,181 [ 1] INFO  Unity: SetDirection: (-97, -24, 0)
+2024-07-02 00:48:16,182 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:16,314 [ 1] INFO  Unity: SetDirection: (-90, -43, 0)
+2024-07-02 00:48:16,315 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:16,407 [ 1] INFO  Unity: SetDirection: (-80, -60, 0)
+2024-07-02 00:48:16,407 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:16,499 [ 1] INFO  Unity: SetDirection: (-68, -73, 0)
+2024-07-02 00:48:16,499 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:16,592 [ 1] INFO  Unity: SetDirection: (-52, -86, 0)
+2024-07-02 00:48:16,592 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:16,685 [ 1] INFO  Unity: SetDirection: (-36, -93, 0)
+2024-07-02 00:48:16,686 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:16,764 [ 1] INFO  Unity: SetDirection: (-19, -98, 0)
+2024-07-02 00:48:16,766 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:16,857 [ 1] INFO  Unity: SetDirection: (2, -100, 0)
+2024-07-02 00:48:16,858 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:16,968 [ 1] INFO  Unity: SetDirection: (22, -97, 0)
+2024-07-02 00:48:16,968 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:17,047 [ 1] INFO  Unity: SetDirection: (39, -92, 0)
+2024-07-02 00:48:17,048 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:17,129 [ 1] INFO  Unity: SetDirection: (54, -84, 0)
+2024-07-02 00:48:17,130 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:17,209 [ 1] INFO  Unity: SetDirection: (68, -73, 0)
+2024-07-02 00:48:17,210 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:17,303 [ 1] INFO  Unity: SetDirection: (80, -60, 0)
+2024-07-02 00:48:17,303 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:17,396 [ 1] INFO  Unity: SetDirection: (91, -42, 0)
+2024-07-02 00:48:17,396 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:17,515 [ 1] INFO  Unity: SetDirection: (97, -24, 0)
+2024-07-02 00:48:17,515 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:17,584 [ 1] INFO  Unity: MoveForward
+2024-07-02 00:48:17,585 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:18,114 [ 1] INFO  Unity: SetPosition: (3478, 2920, 801)
+2024-07-02 00:48:18,114 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-02 00:48:19,448 [ 1] INFO  Unity: Stop
+2024-07-02 00:48:19,448 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-02 00:48:35,022 [ 1] INFO  Unity: Character_4_哈哈 OnDestroy: ID: 4 POS: (3878, 2840, 801) DIR: (97, -24, 0) SPD: 0
+2024-07-02 00:48:35,026 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-02 00:48:35,026 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
 

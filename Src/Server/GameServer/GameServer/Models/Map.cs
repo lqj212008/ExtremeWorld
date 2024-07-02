@@ -2,7 +2,7 @@
 using Common.Data;
 using GameServer.Entities;
 using Network;
-using Services;
+using GameServer.Services;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
