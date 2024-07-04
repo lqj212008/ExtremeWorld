@@ -1,38 +1,60 @@
-2024-07-02 00:29:34,271 [ 1] INFO  Unity: LoadingManager start
-2024-07-02 00:29:38,088 [ 1] INFO  Unity: DataManager > DataManager()
-2024-07-02 00:29:45,466 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-07-02 00:29:45,472 [ 1] INFO  Unity: ConnectToServer() Start
-2024-07-02 00:29:45,484 [ 1] INFO  Unity: DoConnect
-2024-07-02 00:29:45,485 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-07-02 00:29:45,495 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-07-04 17:55:52,795 [ 1] INFO  Unity: LoadingManager start
+2024-07-04 17:55:55,916 [ 1] INFO  Unity: DataManager > DataManager()
+2024-07-04 17:56:01,688 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-07-04 17:56:01,690 [ 1] INFO  Unity: ConnectToServer() Start
+2024-07-04 17:56:01,694 [ 1] INFO  Unity: DoConnect
+2024-07-04 17:56:01,695 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-04 17:56:01,698 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-07-02 00:29:45,509 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-07-02 00:29:45,740 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-07-02 00:29:45,751 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-07-02 00:29:46,378 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-07-02 00:29:46,757 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-02 00:29:46,758 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+2024-07-04 17:56:01,701 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-07-04 17:56:02,222 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-07-04 17:56:02,225 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-07-04 17:56:02,507 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+Network.NetClient[35872] Awake
+2024-07-04 17:56:02,525 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-04 17:56:02,637 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-04 17:56:02,637 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
-2024-07-02 00:29:47,703 [ 1] INFO  Unity: Select Char:[1]込込[Warrior]
-2024-07-02 00:29:48,749 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-07-02 00:29:48,791 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-07-02 00:29:48,798 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:2]
-2024-07-02 00:29:48,799 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:0]
-2024-07-02 00:29:48,800 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:0]
-2024-07-02 00:29:48,800 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:0]
-2024-07-02 00:29:55,857 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
-2024-07-02 00:29:55,862 [ 1] INFO  Unity: AddCharacter: 2: 込込 Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-07-02 00:29:55,876 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-07-02 00:29:56,748 [ 1] WARN  Unity: 
+2024-07-04 17:56:03,401 [ 1] INFO  Unity: Select Char:[1]平寄[Warrior]
+2024-07-04 17:56:04,102 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-04 17:56:04,173 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-04 17:56:04,175 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:407]
+2024-07-04 17:56:04,176 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:200]
+2024-07-04 17:56:04,176 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:60]
+2024-07-04 17:56:04,177 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:244]
+2024-07-04 17:56:04,178 [ 1] INFO  Unity: ItemManager: Init[Id:6, Count:10]
+2024-07-04 17:56:04,178 [ 1] INFO  Unity: ItemManager: Init[Id:8, Count:5]
+2024-07-04 17:56:04,180 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-07-04 17:56:04,182 [ 1] INFO  Unity: AddCharacter: 1: 平寄 Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-04 17:56:04,185 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-07-04 17:56:04,705 [ 1] WARN  Unity: 
 No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-2024-07-02 00:29:56,870 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-07-02 00:34:23,623 [ 1] INFO  Unity: Character_2_込込 OnDestroy: ID: 2 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
-2024-07-02 00:34:23,624 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-02 00:34:23,626 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+2024-07-04 17:56:04,789 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+GameObjectManager[37018] Awake
+2024-07-04 17:56:04,792 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIWorldElementManager[38230] Awake
+2024-07-04 17:56:04,793 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+MainPlayerCamera[38912] Awake
+2024-07-04 17:56:04,793 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIMain[39182] Awake
+2024-07-04 17:56:04,819 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-04 18:05:12,967 [ 1] INFO  Unity: Character_1_平寄 OnDestroy: ID: 1 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
+2024-07-04 18:05:12,969 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-04 18:05:12,969 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007

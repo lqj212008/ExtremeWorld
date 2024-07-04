@@ -1,14 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public abstract class UIWindow : MonoBehaviour
+public abstract class UIWindow : MonoBehaviour,IDragHandler
 {
 	public enum WindowResult { None = 0, Yes, No, }
 	public delegate void CloseHandler(UIWindow sender, WindowResult result);
 	public event CloseHandler OnClose;
+	private RectTransform m_rectTransform;
+	public RectTransform m_RectTransform
+	{
+		get
+		{
+			Transform panel = this.transform.Find("Bg");
+			if (m_rectTransform == null)
+				m_rectTransform = panel.gameObject.GetComponent<RectTransform>();
+            return m_rectTransform;
+		}
+		set
+		{
+            m_rectTransform = value;
 
-	public virtual System.Type Type { get { return this.GetType(); } }
+        }
+	}
+
+    public virtual System.Type Type { get { return this.GetType(); } }
 
 	public void Close(WindowResult result = WindowResult.None)
 	{
@@ -33,5 +50,10 @@ public abstract class UIWindow : MonoBehaviour
 		Debug.LogFormat(this.name + " Clicked");
 	}
 
-	
+    public void OnDrag(PointerEventData eventData)
+    {
+		if(eventData.button != PointerEventData.InputButton.Left)
+			return;
+		m_RectTransform.anchoredPosition += eventData.delta;
+    }
 }

@@ -1,4 +1,5 @@
 ﻿using Common.Data;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,12 @@ namespace Models
 			this.userInfo = info;
 		}
 
-		public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
+        public void AddGold(int gold)
+        {
+			this.CurrentCharacter.Gold += gold;
+        }
+
+        public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
 		public MapDefine CurrentMapData { get; set; }
 		public GameObject CurrentCharacterObject { get; set; }
 

@@ -1,41 +1,60 @@
-2024-07-02 00:22:31,321 [ 1] INFO  Unity: LoadingManager start
-2024-07-02 00:22:35,175 [ 1] INFO  Unity: DataManager > DataManager()
-2024-07-02 00:22:40,774 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-07-02 00:22:40,780 [ 1] INFO  Unity: ConnectToServer() Start
-2024-07-02 00:22:40,791 [ 1] INFO  Unity: DoConnect
-2024-07-02 00:22:40,793 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-07-02 00:22:40,803 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-07-04 17:43:29,436 [ 1] INFO  Unity: LoadingManager start
+2024-07-04 17:43:32,599 [ 1] INFO  Unity: DataManager > DataManager()
+2024-07-04 17:43:41,743 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-07-04 17:43:41,744 [ 1] INFO  Unity: ConnectToServer() Start
+2024-07-04 17:43:41,748 [ 1] INFO  Unity: DoConnect
+2024-07-04 17:43:41,750 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-04 17:43:41,753 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-07-02 00:22:40,817 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-07-02 00:22:41,735 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-07-02 00:22:41,759 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-07-02 00:22:42,076 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-07-02 00:22:42,459 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-02 00:22:42,460 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+2024-07-04 17:43:41,756 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-07-04 17:43:42,275 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-07-04 17:43:42,286 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-07-04 17:43:42,556 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+Network.NetClient[25386] Awake
+2024-07-04 17:43:42,574 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-04 17:43:42,682 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-04 17:43:42,682 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
-2024-07-02 00:22:43,412 [ 1] INFO  Unity: Select Char:[1]哈哈[Warrior]
-2024-07-02 00:22:48,812 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-07-02 00:22:48,935 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-07-02 00:22:48,941 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:1002]
-2024-07-02 00:22:48,942 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:500]
-2024-07-02 00:22:48,943 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:150]
-2024-07-02 00:22:48,943 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:600]
-2024-07-02 00:24:07,443 [ 1] ERROR Unity: Message handler exception:, Array index is out of range., Assembly-CSharp,   at Managers.BagManager.Reset () [0x00096] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Managers\BagManager.cs:49 
-  at Managers.BagManager.Init (SkillBridge.Message.NBagInfo info) [0x00070] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Managers\BagManager.cs:30 
-  at Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x00065] in E:\MMOPRG\Mymmorpg\Src\Client\Assets\Scripts\Services\UserService.cs:260 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00000] in <filename unknown>:0 
-2024-07-02 00:24:07,444 [ 1] FATAL Unity: Managers.BagManager.Reset () (at Assets/Scripts/Managers/BagManager.cs:49)
-Managers.BagManager.Init (SkillBridge.Message.NBagInfo info) (at Assets/Scripts/Managers/BagManager.cs:30)
-Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:260)
-Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg)
+2024-07-04 17:43:43,533 [ 1] INFO  Unity: Select Char:[1]士大[Warrior]
+2024-07-04 17:43:44,407 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-04 17:43:44,478 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-04 17:43:44,480 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:407]
+2024-07-04 17:43:44,481 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:200]
+2024-07-04 17:43:44,481 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:60]
+2024-07-04 17:43:44,482 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:244]
+2024-07-04 17:43:44,482 [ 1] INFO  Unity: ItemManager: Init[Id:6, Count:10]
+2024-07-04 17:43:44,483 [ 1] INFO  Unity: ItemManager: Init[Id:8, Count:5]
+2024-07-04 17:43:44,485 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-07-04 17:43:44,487 [ 1] INFO  Unity: AddCharacter: 1: 士大 Map: 1 Entity: (1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-04 17:43:44,490 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-07-04 17:43:45,022 [ 1] WARN  Unity: 
+No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2024-07-04 17:43:45,107 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-IndexOutOfRangeException: Array index is out of range.
-2024-07-02 00:24:10,599 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-02 00:24:10,599 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+GameObjectManager[26532] Awake
+2024-07-04 17:43:45,111 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIWorldElementManager[27744] Awake
+2024-07-04 17:43:45,112 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+MainPlayerCamera[28426] Awake
+2024-07-04 17:43:45,112 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIMain[28696] Awake
+2024-07-04 17:43:45,137 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-04 17:45:36,194 [ 1] INFO  Unity: Character_1_士大 OnDestroy: ID: 1 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0
+2024-07-04 17:45:36,195 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-04 17:45:36,196 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007

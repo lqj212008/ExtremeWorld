@@ -10,6 +10,7 @@ public class UIBag : UIWindow
     public Text momey;
     public Transform[] pages;
     public GameObject bagItem;
+    
 
     List<Image> slots;
 
@@ -38,19 +39,23 @@ public class UIBag : UIWindow
                 var def = ItemManager.Instance.Items[item.ItemId].Define;
                 ui.SetMainIcon(def.Icon,item.Count.ToString());
             }
+            this.momey.text = User.Instance.CurrentCharacter.Gold.ToString();
         }
 
         for(int i = BagManager.Instance.Items.Length; i < slots.Count; i++)
         {
             slots[i].color = Color.gray;
         }
+        
         yield return null;
     }
 
-    public void SetTitle(string title)
+    public void OnClickReset()
     {
-        this.momey.text = User.Instance.CurrentCharacter.Id.ToString();
+        BagManager.Instance.Reset();
+        momey.text = User.Instance.CurrentCharacter.Gold.ToString();
     }
+   
 }
 
 
