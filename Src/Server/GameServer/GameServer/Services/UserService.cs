@@ -122,15 +122,26 @@ namespace GameServer.Services
                 MapPosY = 4000,
                 MapPosZ = 820,
                 Gold = 100000,
+                Equips = new byte[28]
             };
-
-#if DEBUG
             var bag = new TCharacterBag();
             bag.Owner = character;
             bag.Items = new byte[0];
             bag.Unlocked = 20;
             character.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
-#endif
+            character.Items.Add(new TCharacterItem()
+            {
+                Owner = character,
+                ItemID = 1,
+                ItemCount = 20,
+            });
+            character.Items.Add(new TCharacterItem()
+            {
+                Owner = character,
+                ItemID = 2,
+                ItemCount = 20,
+            });
+
 
             try
             {

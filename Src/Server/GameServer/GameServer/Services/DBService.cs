@@ -23,9 +23,12 @@ namespace GameServer.Services
             Log.Info("DBService has been started");
         }
 
-        public void Save()
+        public void Save(bool async = false)
         {
-            entities.SaveChangesAsync();
+            if (async) 
+                entities.SaveChangesAsync();
+            else 
+                entities.SaveChanges();
         }
     }
 }
