@@ -1,42 +1,72 @@
-2024-07-06 10:49:40,019 [ 1] INFO  Unity: LoadingManager start
-2024-07-06 10:49:43,126 [ 1] INFO  Unity: DataManager > DataManager()
-2024-07-06 10:49:51,044 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-07-06 10:49:51,050 [ 1] INFO  Unity: ConnectToServer() Start
-2024-07-06 10:49:51,061 [ 1] INFO  Unity: DoConnect
-2024-07-06 10:49:51,063 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-07-06 10:49:51,071 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-07-12 10:38:27,111 [ 1] INFO  Unity: LoadingManager start
+2024-07-12 10:38:30,205 [ 1] INFO  Unity: DataManager > DataManager()
+2024-07-12 10:38:38,329 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-07-12 10:38:38,335 [ 1] INFO  Unity: ConnectToServer() Start
+2024-07-12 10:38:38,347 [ 1] INFO  Unity: DoConnect
+2024-07-12 10:38:38,349 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-12 10:38:38,356 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-07-06 10:49:51,086 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-07-06 10:49:51,316 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-07-06 10:49:51,327 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-07-06 10:49:51,609 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+2024-07-12 10:38:38,371 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-07-12 10:38:38,610 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-07-12 10:38:38,631 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-07-12 10:38:38,937 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-Network.NetClient[29472] Awake
-2024-07-06 10:49:51,630 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-07-06 10:49:56,324 [ 1] FATAL Unity: System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
-System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
-System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
-System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
-System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
-System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-
-FormatException: Input string was not in the correct format
-2024-07-06 10:49:56,324 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-06 10:49:56,325 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient[27408] Awake
+2024-07-12 10:38:38,957 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-12 10:38:39,379 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-12 10:38:39,380 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
-2024-07-06 10:50:01,277 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-06 10:50:01,277 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-07-12 10:38:40,181 [ 1] INFO  Unity: Select Char:[1]込込[Warrior]
+2024-07-12 10:38:40,842 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-12 10:38:40,889 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-12 10:38:40,896 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:20]
+2024-07-12 10:38:40,897 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:20]
+2024-07-12 10:38:40,898 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:10]
+2024-07-12 10:38:40,898 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:5]
+2024-07-12 10:38:40,944 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-07-12 10:38:40,950 [ 1] INFO  Unity: AddCharacter: 2: 込込 Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:38:40,964 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-07-12 10:38:41,419 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-12 10:38:41,450 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-12 10:38:41,450 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:20]
+2024-07-12 10:38:41,451 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:20]
+2024-07-12 10:38:41,451 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:10]
+2024-07-12 10:38:41,452 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:5]
+2024-07-12 10:38:41,460 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-07-12 10:38:41,461 [ 1] INFO  Unity: AddCharacter: 3: 込込 Map: 1 Entity: (3:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:38:41,461 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 2
+2024-07-12 10:38:41,462 [ 1] INFO  Unity: AddCharacter: 3: 込込 Map: 1 Entity: (3:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:38:41,462 [ 1] INFO  Unity: AddCharacter: 2: 込込 Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:38:41,505 [ 1] WARN  Unity: 
+No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2024-07-12 10:38:41,592 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIWorldElementManager[-37230] Awake
+2024-07-12 10:38:41,592 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+GameObjectManager[28554] Awake
+2024-07-12 10:38:41,605 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+MainPlayerCamera[30460] Awake
+2024-07-12 10:38:41,606 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIMain[30730] Awake
+2024-07-12 10:38:41,642 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-12 10:38:41,660 [ 1] FATAL Unity: UIMinimap.Update () (at Assets/Scripts/UI/MiniMap/UIMinimap.cs:43)
+
+NullReferenceException: Object reference not set to an instance of an object
+2024-07-12 10:39:01,134 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-12 10:39:01,134 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
+2024-07-12 10:39:01,146 [ 1] INFO  Unity: Character_2_込込 OnDestroy: ID: 2 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0

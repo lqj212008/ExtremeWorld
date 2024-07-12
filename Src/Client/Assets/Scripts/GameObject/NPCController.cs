@@ -8,11 +8,13 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour {
 	public int npcID;
-	SkinnedMeshRenderer renderer;
+    SkinnedMeshRenderer renderer;
 	Animator anim;
 	NPCDefine npc;
 	Color orignColor;
 	private bool inInteractive = false;
+
+	NpcQuestStatus questStatus;
 
 	// Use this for initialization
 	void Start () {
@@ -21,8 +23,29 @@ public class NPCController : MonoBehaviour {
 		npc = NPCManager.Instance.GetNPCDefine(npcID);
 		orignColor = renderer.materials[0].color;
 		this.StartCoroutine(Actions());
+		RefreshNpcStatus();
+		QuestManager.Instance.onQuestStatusChanged += OnQuestStatusChanged;
+
+    }
+
+	void OnQuestStatusChanged(Quest quest)
+	{
+		this.RefreshNpcStatus();
+	}
+
+	void RefreshNpcStatus()
+	{
+		questStatus = QuestManager.Instance.GetQuestStatusByNpc(this.npcID);
+		UIWorldElementManager.Instance.AddNpcQuestStatus(this.transform, questStatus);
 	}
 	
+	void OnDestroy()
+	{
+		QuestManager.Instance.onQuestStatusChanged -= OnQuestStatusChanged;
+		if(UIWorldElementManager.Instance != null )
+			UIWorldElementManager.Instance.RemoveNpcQuestStatus(this.transform);
+	}
+
 	IEnumerator Actions()
 	{
 		while (true)

@@ -1,41 +1,6 @@
-2024-07-06 10:44:20,134 [ 1] INFO  Unity: LoadingManager start
-2024-07-06 10:44:23,197 [ 1] INFO  Unity: DataManager > DataManager()
-2024-07-06 10:44:28,770 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-07-06 10:44:28,770 [ 1] INFO  Unity: ConnectToServer() Start
-2024-07-06 10:44:28,774 [ 1] INFO  Unity: DoConnect
-2024-07-06 10:44:28,776 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-07-06 10:44:28,779 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2024-07-06 10:44:28,783 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-07-06 10:44:28,875 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-07-06 10:44:28,879 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-07-06 10:44:29,144 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
-
-Network.NetClient[27720] Awake
-2024-07-06 10:44:29,162 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-07-06 10:44:29,251 [ 1] FATAL Unity: System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
-System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
-System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
-System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
-System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
-System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-
-FormatException: Input string was not in the correct format
-2024-07-06 10:44:29,251 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-06 10:44:29,252 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
-
-CloseConnection(), errorCode: 1007
-2024-07-06 10:49:31,484 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-06 10:49:31,484 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-07-12 10:38:20,765 [ 1] INFO  Unity: LoadingManager start
+2024-07-12 10:38:21,428 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-12 10:38:21,429 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 

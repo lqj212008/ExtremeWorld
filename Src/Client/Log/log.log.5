@@ -1,42 +1,90 @@
-2024-07-06 10:50:08,865 [ 1] INFO  Unity: LoadingManager start
-2024-07-06 10:50:12,272 [ 1] INFO  Unity: DataManager > DataManager()
-2024-07-06 10:50:17,006 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-07-06 10:50:17,012 [ 1] INFO  Unity: ConnectToServer() Start
-2024-07-06 10:50:17,022 [ 1] INFO  Unity: DoConnect
-2024-07-06 10:50:17,024 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-07-06 10:50:17,034 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-07-12 10:39:06,991 [ 1] INFO  Unity: LoadingManager start
+2024-07-12 10:39:10,453 [ 1] INFO  Unity: DataManager > DataManager()
+2024-07-12 10:39:16,087 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-07-12 10:39:16,093 [ 1] INFO  Unity: ConnectToServer() Start
+2024-07-12 10:39:16,104 [ 1] INFO  Unity: DoConnect
+2024-07-12 10:39:16,106 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-12 10:39:16,116 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-07-06 10:50:17,046 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-07-06 10:50:17,275 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-07-06 10:50:17,284 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-07-06 10:50:17,572 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+2024-07-12 10:39:16,131 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-07-12 10:39:16,367 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-07-12 10:39:16,376 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-07-12 10:39:16,675 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-Network.NetClient[31224] Awake
-2024-07-06 10:50:17,592 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-07-06 10:50:29,891 [ 1] FATAL Unity: System.Int32.Parse (System.String s, NumberStyles style, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:640)
-System.Int32.Parse (System.String s, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Int32.cs:208)
-System.Convert.ToInt32 (System.String value, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:1277)
-System.String.System.IConvertible.ToInt32 (IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/String.cs:2391)
-System.Convert.ToType (System.Object value, System.Type conversionType, IFormatProvider provider, Boolean try_target_to_type) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2910)
-System.Convert.ChangeType (System.Object value, System.Type conversionType, IFormatProvider provider) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Convert.cs:2511)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "ID" to type 'System.Int32'. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-Rethrow as JsonSerializationException: Could not convert string 'ID' to dictionary key type 'System.Int32'. Create a TypeConverter to convert from the string to the key type object. Path '1.ID', line 3, position 9.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateDictionary (IDictionary dictionary, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonDictionaryContract contract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, System.String id)
-
-FormatException: Input string was not in the correct format
-2024-07-06 10:50:29,892 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-06 10:50:29,892 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient[32658] Awake
+2024-07-12 10:39:16,696 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-12 10:39:17,123 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-12 10:39:17,123 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
-2024-07-06 10:50:49,059 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-06 10:50:49,060 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+2024-07-12 10:39:18,067 [ 1] INFO  Unity: Select Char:[1]込込[Warrior]
+2024-07-12 10:39:18,860 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-12 10:39:18,907 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-12 10:39:18,914 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:20]
+2024-07-12 10:39:18,914 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:20]
+2024-07-12 10:39:18,915 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:10]
+2024-07-12 10:39:18,916 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:5]
+2024-07-12 10:39:18,959 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 2
+2024-07-12 10:39:18,966 [ 1] INFO  Unity: AddCharacter: 4: 込込 Map: 1 Entity: (4:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:39:18,979 [ 1] INFO  Unity: AddCharacter: 2: 込込 Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:39:18,979 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-07-12 10:39:19,504 [ 1] WARN  Unity: 
+No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2024-07-12 10:39:19,598 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIWorldElementManager[-45496] Awake
+2024-07-12 10:39:19,599 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+GameObjectManager[33804] Awake
+2024-07-12 10:39:19,614 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+MainPlayerCamera[35710] Awake
+2024-07-12 10:39:19,614 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+UIMain[35980] Awake
+2024-07-12 10:39:19,649 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-12 10:39:21,922 [ 1] INFO  Unity: SetDirection: (98, 20, 0)
+2024-07-12 10:39:21,923 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-12 10:39:22,015 [ 1] INFO  Unity: SetDirection: (93, 38, 0)
+2024-07-12 10:39:22,016 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-12 10:39:22,095 [ 1] INFO  Unity: SetDirection: (85, 53, 0)
+2024-07-12 10:39:22,096 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-12 10:39:22,187 [ 1] INFO  Unity: SetDirection: (74, 67, 0)
+2024-07-12 10:39:22,188 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-12 10:39:22,267 [ 1] INFO  Unity: SetDirection: (61, 79, 0)
+2024-07-12 10:39:22,267 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-12 10:39:22,320 [ 1] INFO  Unity: MoveForward
+2024-07-12 10:39:22,322 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-12 10:39:22,360 [ 1] INFO  Unity: SetDirection: (43, 90, 0)
+2024-07-12 10:39:22,360 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-12 10:39:22,466 [ 1] INFO  Unity: SetDirection: (25, 97, 0)
+2024-07-12 10:39:22,466 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-12 10:39:22,638 [ 1] INFO  Unity: SetDirection: (7, 100, 0)
+2024-07-12 10:39:22,638 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-12 10:39:23,140 [ 1] INFO  Unity: SetDirection: (-11, 99, 0)
+2024-07-12 10:39:23,140 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-12 10:39:23,246 [ 1] INFO  Unity: SetDirection: (-31, 95, 0)
+2024-07-12 10:39:23,246 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-12 10:39:23,247 [ 1] INFO  Unity: SetPosition: (5067, 4212, 801)
+2024-07-12 10:39:23,249 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-12 10:39:23,338 [ 1] INFO  Unity: SetDirection: (-47, 88, 0)
+2024-07-12 10:39:23,339 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-12 10:39:23,445 [ 1] INFO  Unity: SetDirection: (-63, 78, 0)
+2024-07-12 10:39:23,445 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
+2024-07-12 10:39:24,225 [ 1] INFO  Unity: Stop
+2024-07-12 10:39:24,226 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 4, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
+2024-07-12 10:45:54,774 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-12 10:45:54,775 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
+2024-07-12 10:45:54,779 [ 1] INFO  Unity: Character_4_込込 OnDestroy: ID: 4 POS: (4905, 4449, 801) DIR: (-63, 78, 0) SPD: 0
+2024-07-12 10:45:54,779 [ 1] INFO  Unity: Character_2_込込 OnDestroy: ID: 2 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0

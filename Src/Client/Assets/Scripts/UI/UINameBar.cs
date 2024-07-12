@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[ExecuteInEditMode]
 public class UINameBar : MonoBehaviour {
 
 	public Text avaverName;
@@ -23,8 +24,6 @@ public class UINameBar : MonoBehaviour {
 	void Update()
 	{
 		this.UpdateInfo();
-
-		this.transform.forward = cam.transform.forward;
 	}
 	void UpdateInfo()
 	{

@@ -8,7 +8,9 @@ public class TabView : MonoBehaviour {
 	public TabButton[] tabButtons;
 	public GameObject[] tabPages;
 	public int index = -1;
-    
+
+    public Action<int> OnTabSelect { get; internal set; }
+
 
     // Use this for initialization
     IEnumerator Start () {
@@ -29,8 +31,11 @@ public class TabView : MonoBehaviour {
 			for(int i = 0;i < tabButtons.Length;i++)
 			{
 				tabButtons[i].Select(i == index);
-				tabPages[i].SetActive(i == index);
+				if(i<tabPages.Length)
+					tabPages[i].SetActive(i == index);
 			}
+			if(OnTabSelect != null)
+				OnTabSelect(index);
 			
 		}
     }
