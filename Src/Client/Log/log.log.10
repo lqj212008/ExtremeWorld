@@ -1,393 +1,72 @@
-2024-07-10 22:46:32,587 [ 1] INFO  Unity: LoadingManager start
-2024-07-10 22:46:35,685 [ 1] INFO  Unity: DataManager > DataManager()
-2024-07-10 22:46:46,758 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
-2024-07-10 22:46:46,759 [ 1] INFO  Unity: ConnectToServer() Start
-2024-07-10 22:46:46,763 [ 1] INFO  Unity: DoConnect
-2024-07-10 22:46:46,764 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2024-07-10 22:46:46,768 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2024-07-12 10:38:27,111 [ 1] INFO  Unity: LoadingManager start
+2024-07-12 10:38:30,205 [ 1] INFO  Unity: DataManager > DataManager()
+2024-07-12 10:38:38,329 [ 1] INFO  Unity: UserLoginRequest::user: 123 psw: 123
+2024-07-12 10:38:38,335 [ 1] INFO  Unity: ConnectToServer() Start
+2024-07-12 10:38:38,347 [ 1] INFO  Unity: DoConnect
+2024-07-12 10:38:38,349 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2024-07-12 10:38:38,356 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2024-07-10 22:46:46,771 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
-2024-07-10 22:46:46,872 [ 1] INFO  Unity: OnUserLogin: Success  [None]
-2024-07-10 22:46:46,883 [ 1] INFO  Unity: LoadLevel: CharSelect
-2024-07-10 22:46:47,162 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+2024-07-12 10:38:38,371 [ 1] INFO  Unity: LoadingMessager::OnGameServerConnect: 0 reason: Success
+2024-07-12 10:38:38,610 [ 1] INFO  Unity: OnUserLogin: Success  [None]
+2024-07-12 10:38:38,631 [ 1] INFO  Unity: LoadLevel: CharSelect
+2024-07-12 10:38:38,937 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-Network.NetClient[55308] Awake
-2024-07-10 22:46:47,179 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-07-10 22:46:47,307 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-10 22:46:47,308 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+Network.NetClient[27408] Awake
+2024-07-12 10:38:38,957 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-12 10:38:39,379 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-12 10:38:39,380 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
-2024-07-10 22:46:48,063 [ 1] INFO  Unity: Select Char:[1]¹þ¹þ[Warrior]
-2024-07-10 22:46:48,832 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2024-07-10 22:46:48,867 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2024-07-10 22:46:48,869 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:20]
-2024-07-10 22:46:48,870 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:20]
-2024-07-10 22:46:48,870 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:5]
-2024-07-10 22:46:48,877 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
-2024-07-10 22:46:48,880 [ 1] INFO  Unity: AddCharacter: 6: ¹þ¹þ Map: 1 Entity: (6:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2024-07-10 22:46:48,883 [ 1] INFO  Unity: LoadLevel: MainCity
-2024-07-10 22:46:49,443 [ 1] WARN  Unity: 
+2024-07-12 10:38:40,181 [ 1] INFO  Unity: Select Char:[1]¹þ¹þ[Warrior]
+2024-07-12 10:38:40,842 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-12 10:38:40,889 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-12 10:38:40,896 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:20]
+2024-07-12 10:38:40,897 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:20]
+2024-07-12 10:38:40,898 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:10]
+2024-07-12 10:38:40,898 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:5]
+2024-07-12 10:38:40,944 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-07-12 10:38:40,950 [ 1] INFO  Unity: AddCharacter: 2: ¹þ¹þ Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:38:40,964 [ 1] INFO  Unity: LoadLevel: MainCity
+2024-07-12 10:38:41,419 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2024-07-12 10:38:41,450 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2024-07-12 10:38:41,450 [ 1] INFO  Unity: ItemManager: Init[Id:1, Count:20]
+2024-07-12 10:38:41,451 [ 1] INFO  Unity: ItemManager: Init[Id:2, Count:20]
+2024-07-12 10:38:41,451 [ 1] INFO  Unity: ItemManager: Init[Id:3, Count:10]
+2024-07-12 10:38:41,452 [ 1] INFO  Unity: ItemManager: Init[Id:4, Count:5]
+2024-07-12 10:38:41,460 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 1
+2024-07-12 10:38:41,461 [ 1] INFO  Unity: AddCharacter: 3: ¹þ¹þ Map: 1 Entity: (3:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:38:41,461 [ 1] INFO  Unity: OnMapCharacterEnter:Map: 1 Count: 2
+2024-07-12 10:38:41,462 [ 1] INFO  Unity: AddCharacter: 3: ¹þ¹þ Map: 1 Entity: (3:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:38:41,462 [ 1] INFO  Unity: AddCharacter: 2: ¹þ¹þ Map: 1 Entity: (2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2024-07-12 10:38:41,505 [ 1] WARN  Unity: 
 No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-2024-07-10 22:46:49,530 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+2024-07-12 10:38:41,592 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-UIWorldElementManager[-178726] Awake
-2024-07-10 22:46:49,530 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+UIWorldElementManager[-37230] Awake
+2024-07-12 10:38:41,592 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-GameObjectManager[56454] Awake
-2024-07-10 22:46:49,534 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+GameObjectManager[28554] Awake
+2024-07-12 10:38:41,605 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-MainPlayerCamera[58360] Awake
-2024-07-10 22:46:49,534 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
+MainPlayerCamera[30460] Awake
+2024-07-12 10:38:41,606 [ 1] WARN  Unity: UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-UIMain[58630] Awake
-2024-07-10 22:46:49,564 [ 1] INFO  Unity: LevelLoadCompleted:1
-2024-07-10 22:46:50,340 [ 1] INFO  Unity: SetDirection: (98, 17, 0)
-2024-07-10 22:46:50,342 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:46:50,447 [ 1] INFO  Unity: SetDirection: (94, 35, 0)
-2024-07-10 22:46:50,447 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:46:50,526 [ 1] INFO  Unity: SetDirection: (86, 51, 0)
-2024-07-10 22:46:50,526 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:46:50,579 [ 1] INFO  Unity: MoveForward
-2024-07-10 22:46:50,580 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:50,631 [ 1] INFO  Unity: SetDirection: (74, 67, 0)
-2024-07-10 22:46:50,631 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:50,711 [ 1] INFO  Unity: SetDirection: (61, 79, 0)
-2024-07-10 22:46:50,712 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:50,790 [ 1] INFO  Unity: SetDirection: (46, 89, 0)
-2024-07-10 22:46:50,791 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:50,896 [ 1] INFO  Unity: SetDirection: (27, 96, 0)
-2024-07-10 22:46:50,897 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:50,975 [ 1] INFO  Unity: SetDirection: (10, 100, 0)
-2024-07-10 22:46:50,975 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:51,069 [ 1] INFO  Unity: SetDirection: (-8, 100, 0)
-2024-07-10 22:46:51,070 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:51,161 [ 1] INFO  Unity: SetDirection: (-28, 96, 0)
-2024-07-10 22:46:51,162 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:51,279 [ 1] INFO  Unity: SetDirection: (-45, 89, 0)
-2024-07-10 22:46:51,280 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:52,682 [ 1] INFO  Unity: SetDirection: (-60, 80, 0)
-2024-07-10 22:46:52,683 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:53,013 [ 1] INFO  Unity: Stop
-2024-07-10 22:46:53,014 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:46:53,040 [ 1] INFO  Unity: MoveBack
-2024-07-10 22:46:53,041 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:46:53,172 [ 1] INFO  Unity: SetDirection: (-45, 89, 0)
-2024-07-10 22:46:53,173 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:46:53,264 [ 1] INFO  Unity: SetDirection: (-28, 96, 0)
-2024-07-10 22:46:53,265 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:46:53,450 [ 1] INFO  Unity: SetDirection: (-11, 99, 0)
-2024-07-10 22:46:53,451 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:46:53,648 [ 1] INFO  Unity: SetDirection: (8, 100, 0)
-2024-07-10 22:46:53,649 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:46:53,755 [ 1] INFO  Unity: SetDirection: (27, 96, 0)
-2024-07-10 22:46:53,755 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:46:53,847 [ 1] INFO  Unity: SetDirection: (46, 89, 0)
-2024-07-10 22:46:53,848 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:46:53,887 [ 1] INFO  Unity: Stop
-2024-07-10 22:46:53,887 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:46:53,940 [ 1] INFO  Unity: SetDirection: (61, 79, 0)
-2024-07-10 22:46:53,941 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:46:54,019 [ 1] INFO  Unity: SetDirection: (74, 67, 0)
-2024-07-10 22:46:54,019 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:46:54,085 [ 1] INFO  Unity: MoveForward
-2024-07-10 22:46:54,086 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,125 [ 1] INFO  Unity: SetDirection: (86, 50, 0)
-2024-07-10 22:46:54,126 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,217 [ 1] INFO  Unity: SetDirection: (95, 31, 0)
-2024-07-10 22:46:54,218 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,324 [ 1] INFO  Unity: SetDirection: (99, 11, 0)
-2024-07-10 22:46:54,324 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,403 [ 1] INFO  Unity: SetDirection: (100, -6, 0)
-2024-07-10 22:46:54,403 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,483 [ 1] INFO  Unity: SetDirection: (97, -24, 0)
-2024-07-10 22:46:54,484 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,588 [ 1] INFO  Unity: SetDirection: (90, -43, 0)
-2024-07-10 22:46:54,589 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,667 [ 1] INFO  Unity: SetDirection: (81, -58, 0)
-2024-07-10 22:46:54,668 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,761 [ 1] INFO  Unity: SetDirection: (70, -72, 0)
-2024-07-10 22:46:54,761 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,853 [ 1] INFO  Unity: SetDirection: (53, -85, 0)
-2024-07-10 22:46:54,853 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:54,959 [ 1] INFO  Unity: SetDirection: (35, -94, 0)
-2024-07-10 22:46:54,960 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:55,039 [ 1] INFO  Unity: SetDirection: (18, -98, 0)
-2024-07-10 22:46:55,040 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:55,117 [ 1] INFO  Unity: SetDirection: (1, -100, 0)
-2024-07-10 22:46:55,118 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:55,202 [ 1] INFO  Unity: SetDirection: (-17, -99, 0)
-2024-07-10 22:46:55,204 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:55,506 [ 1] INFO  Unity: SetDirection: (3, -100, 0)
-2024-07-10 22:46:55,507 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:55,612 [ 1] INFO  Unity: SetDirection: (21, -98, 0)
-2024-07-10 22:46:55,613 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:55,890 [ 1] INFO  Unity: SetDirection: (3, -100, 0)
-2024-07-10 22:46:55,891 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:55,995 [ 1] INFO  Unity: SetDirection: (-16, -99, 0)
-2024-07-10 22:46:55,996 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:56,074 [ 1] INFO  Unity: SetDirection: (-33, -94, 0)
-2024-07-10 22:46:56,075 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:56,181 [ 1] INFO  Unity: SetDirection: (-51, -86, 0)
-2024-07-10 22:46:56,182 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:56,313 [ 1] INFO  Unity: SetDirection: (-66, -76, 0)
-2024-07-10 22:46:56,314 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:57,650 [ 1] INFO  Unity: SetPosition: (4805, 3672, 801)
-2024-07-10 22:46:57,651 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:58,523 [ 1] INFO  Unity: SetPosition: (4683, 3531, 801)
-2024-07-10 22:46:58,524 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:58,815 [ 1] INFO  Unity: SetPosition: (4683, 3531, 801)
-2024-07-10 22:46:58,815 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:58,946 [ 1] INFO  Unity: SetDirection: (-51, -86, 0)
-2024-07-10 22:46:58,946 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:59,078 [ 1] INFO  Unity: SetDirection: (-34, -94, 0)
-2024-07-10 22:46:59,079 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:59,158 [ 1] INFO  Unity: SetDirection: (-17, -99, 0)
-2024-07-10 22:46:59,158 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:59,264 [ 1] INFO  Unity: SetDirection: (3, -100, 0)
-2024-07-10 22:46:59,264 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:59,409 [ 1] INFO  Unity: SetDirection: (21, -98, 0)
-2024-07-10 22:46:59,410 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:59,754 [ 1] INFO  Unity: SetDirection: (3, -100, 0)
-2024-07-10 22:46:59,754 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:59,846 [ 1] INFO  Unity: SetDirection: (-16, -99, 0)
-2024-07-10 22:46:59,846 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:59,887 [ 1] INFO  Unity: SetPosition: (4692, 3286, 801)
-2024-07-10 22:46:59,887 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:46:59,925 [ 1] INFO  Unity: SetDirection: (-33, -94, 0)
-2024-07-10 22:46:59,926 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:00,018 [ 1] INFO  Unity: SetDirection: (-49, -87, 0)
-2024-07-10 22:47:00,018 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:00,097 [ 1] INFO  Unity: SetDirection: (-64, -77, 0)
-2024-07-10 22:47:00,098 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:00,203 [ 1] INFO  Unity: SetDirection: (-78, -62, 0)
-2024-07-10 22:47:00,203 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:00,322 [ 1] INFO  Unity: SetDirection: (-88, -48, 0)
-2024-07-10 22:47:00,323 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:00,468 [ 1] INFO  Unity: SetDirection: (-95, -31, 0)
-2024-07-10 22:47:00,468 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:00,560 [ 1] INFO  Unity: SetDirection: (-99, -12, 0)
-2024-07-10 22:47:00,561 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:00,654 [ 1] INFO  Unity: SetDirection: (-100, 5, 0)
-2024-07-10 22:47:00,660 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:00,761 [ 1] INFO  Unity: SetDirection: (-97, 24, 0)
-2024-07-10 22:47:00,762 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:01,439 [ 1] INFO  Unity: Stop
-2024-07-10 22:47:01,440 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:02,864 [ 1] INFO  Unity: SendQuestSubmit
-2024-07-10 22:47:02,891 [ 1] INFO  Unity: OnQuestSubmit:Failed,ERR:ÈÎÎñÎ´Íê³É
-2024-07-10 22:47:04,625 [ 1] INFO  Unity: SetDirection: (-91, 42, 0)
-2024-07-10 22:47:04,625 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:05,764 [ 1] INFO  Unity: SendQuestSubmit
-2024-07-10 22:47:05,791 [ 1] INFO  Unity: OnQuestSubmit:Failed,ERR:ÈÎÎñÎ´Íê³É
-2024-07-10 22:47:05,988 [ 1] INFO  Unity: SetDirection: (-82, 58, 0)
-2024-07-10 22:47:05,989 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:06,584 [ 1] INFO  Unity: SetDirection: (-70, 71, 0)
-2024-07-10 22:47:06,584 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:06,958 [ 1] INFO  Unity: MoveBack
-2024-07-10 22:47:06,958 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:47:07,381 [ 1] INFO  Unity: SetDirection: (-82, 58, 0)
-2024-07-10 22:47:07,381 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:47:07,486 [ 1] INFO  Unity: SetDirection: (-92, 40, 0)
-2024-07-10 22:47:07,487 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:47:07,502 [ 1] INFO  Unity: Stop
-2024-07-10 22:47:07,502 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:07,542 [ 1] INFO  Unity: MoveForward
-2024-07-10 22:47:07,542 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:07,581 [ 1] INFO  Unity: SetDirection: (-98, 20, 0)
-2024-07-10 22:47:07,582 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:07,675 [ 1] INFO  Unity: SetDirection: (-100, 0, 0)
-2024-07-10 22:47:07,676 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:07,780 [ 1] INFO  Unity: SetDirection: (-98, -20, 0)
-2024-07-10 22:47:07,781 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:07,926 [ 1] INFO  Unity: SetDirection: (-93, -38, 0)
-2024-07-10 22:47:07,927 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:08,243 [ 1] INFO  Unity: SetDirection: (-98, -20, 0)
-2024-07-10 22:47:08,244 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:08,349 [ 1] INFO  Unity: SetDirection: (-100, -1, 0)
-2024-07-10 22:47:08,350 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:08,455 [ 1] INFO  Unity: SetDirection: (-98, 19, 0)
-2024-07-10 22:47:08,456 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:08,600 [ 1] INFO  Unity: SetDirection: (-93, 36, 0)
-2024-07-10 22:47:08,601 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:09,223 [ 1] INFO  Unity: SetDirection: (-85, 52, 0)
-2024-07-10 22:47:09,224 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:09,328 [ 1] INFO  Unity: SetDirection: (-74, 67, 0)
-2024-07-10 22:47:09,329 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:09,501 [ 1] INFO  Unity: SetDirection: (-61, 79, 0)
-2024-07-10 22:47:09,502 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:11,671 [ 1] INFO  Unity: SetDirection: (-46, 89, 0)
-2024-07-10 22:47:11,671 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:12,173 [ 1] INFO  Unity: SetDirection: (-29, 96, 0)
-2024-07-10 22:47:12,174 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:12,306 [ 1] INFO  Unity: SetDirection: (-11, 99, 0)
-2024-07-10 22:47:12,306 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:12,504 [ 1] INFO  Unity: SetDirection: (6, 100, 0)
-2024-07-10 22:47:12,505 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:13,591 [ 1] INFO  Unity: SetDirection: (24, 97, 0)
-2024-07-10 22:47:13,592 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:14,094 [ 1] INFO  Unity: SetDirection: (41, 91, 0)
-2024-07-10 22:47:14,094 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:14,213 [ 1] INFO  Unity: SetDirection: (57, 82, 0)
-2024-07-10 22:47:14,213 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:14,332 [ 1] INFO  Unity: SetDirection: (72, 69, 0)
-2024-07-10 22:47:14,333 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:15,867 [ 1] INFO  Unity: SetDirection: (83, 55, 0)
-2024-07-10 22:47:15,868 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:16,013 [ 1] INFO  Unity: SetDirection: (92, 40, 0)
-2024-07-10 22:47:16,013 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:16,264 [ 1] INFO  Unity: SetDirection: (98, 22, 0)
-2024-07-10 22:47:16,265 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:16,410 [ 1] INFO  Unity: SetDirection: (100, 4, 0)
-2024-07-10 22:47:16,410 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:16,727 [ 1] INFO  Unity: Stop
-2024-07-10 22:47:16,728 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:18,469 [ 1] INFO  Unity: SendQuestAccept
-2024-07-10 22:47:18,498 [ 1] INFO  Unity: OnQuestAccept:Success,ERR:
-2024-07-10 22:47:19,968 [ 1] INFO  Unity: MoveForward
-2024-07-10 22:47:19,968 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:20,061 [ 1] INFO  Unity: SetDirection: (97, 22, 0)
-2024-07-10 22:47:20,061 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:20,154 [ 1] INFO  Unity: SetDirection: (91, 41, 0)
-2024-07-10 22:47:20,154 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:20,233 [ 1] INFO  Unity: SetDirection: (83, 56, 0)
-2024-07-10 22:47:20,233 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:20,351 [ 1] INFO  Unity: SetDirection: (70, 71, 0)
-2024-07-10 22:47:20,353 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:21,847 [ 1] INFO  Unity: SetDirection: (57, 82, 0)
-2024-07-10 22:47:21,848 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:22,165 [ 1] INFO  Unity: SetPosition: (4519, 5277, 801)
-2024-07-10 22:47:22,166 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:23,315 [ 1] INFO  Unity: SetDirection: (42, 91, 0)
-2024-07-10 22:47:23,317 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:24,295 [ 1] INFO  Unity: Stop
-2024-07-10 22:47:24,296 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:26,439 [ 1] INFO  Unity: MoveBack
-2024-07-10 22:47:26,439 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:47:27,034 [ 1] INFO  Unity: SetDirection: (25, 97, 0)
-2024-07-10 22:47:27,034 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:47:27,193 [ 1] INFO  Unity: SetDirection: (6, 100, 0)
-2024-07-10 22:47:27,193 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:47:27,285 [ 1] INFO  Unity: SetDirection: (-14, 99, 0)
-2024-07-10 22:47:27,286 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: -300 
-2024-07-10 22:47:27,324 [ 1] INFO  Unity: Stop
-2024-07-10 22:47:27,325 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:27,364 [ 1] INFO  Unity: SetDirection: (-31, 95, 0)
-2024-07-10 22:47:27,365 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:27,457 [ 1] INFO  Unity: SetDirection: (-47, 88, 0)
-2024-07-10 22:47:27,458 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:27,537 [ 1] INFO  Unity: SetDirection: (-62, 79, 0)
-2024-07-10 22:47:27,538 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:27,617 [ 1] INFO  Unity: SetDirection: (-75, 67, 0)
-2024-07-10 22:47:27,618 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:27,721 [ 1] INFO  Unity: SetDirection: (-87, 50, 0)
-2024-07-10 22:47:27,722 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:27,801 [ 1] INFO  Unity: SetDirection: (-94, 34, 0)
-2024-07-10 22:47:27,802 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:27,894 [ 1] INFO  Unity: SetDirection: (-99, 17, 0)
-2024-07-10 22:47:27,894 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:27,986 [ 1] INFO  Unity: SetDirection: (-100, -4, 0)
-2024-07-10 22:47:27,987 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:28,093 [ 1] INFO  Unity: SetDirection: (-97, -25, 0)
-2024-07-10 22:47:28,093 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:28,185 [ 1] INFO  Unity: SetDirection: (-90, -44, 0)
-2024-07-10 22:47:28,186 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:28,278 [ 1] INFO  Unity: SetDirection: (-81, -59, 0)
-2024-07-10 22:47:28,279 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:28,358 [ 1] INFO  Unity: SetDirection: (-69, -72, 0)
-2024-07-10 22:47:28,359 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:28,385 [ 1] INFO  Unity: MoveForward
-2024-07-10 22:47:28,385 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:28,450 [ 1] INFO  Unity: SetDirection: (-53, -85, 0)
-2024-07-10 22:47:28,451 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:28,583 [ 1] INFO  Unity: SetDirection: (-36, -93, 0)
-2024-07-10 22:47:28,583 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:29,641 [ 1] INFO  Unity: SetDirection: (-17, -99, 0)
-2024-07-10 22:47:29,642 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:30,092 [ 1] INFO  Unity: SetDirection: (-35, -94, 0)
-2024-07-10 22:47:30,093 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:30,171 [ 1] INFO  Unity: SetDirection: (-51, -86, 0)
-2024-07-10 22:47:30,171 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:30,277 [ 1] INFO  Unity: SetDirection: (-68, -74, 0)
-2024-07-10 22:47:30,277 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:30,382 [ 1] INFO  Unity: SetDirection: (-81, -59, 0)
-2024-07-10 22:47:30,383 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:30,529 [ 1] INFO  Unity: SetDirection: (-90, -44, 0)
-2024-07-10 22:47:30,529 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:31,484 [ 1] INFO  Unity: Stop
-2024-07-10 22:47:31,485 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:33,604 [ 1] INFO  Unity: SetDirection: (-80, -59, 0)
-2024-07-10 22:47:33,605 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:33,750 [ 1] INFO  Unity: SetDirection: (-68, -73, 0)
-2024-07-10 22:47:33,750 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:33,856 [ 1] INFO  Unity: SetDirection: (-53, -85, 0)
-2024-07-10 22:47:33,856 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:33,936 [ 1] INFO  Unity: SetDirection: (-37, -93, 0)
-2024-07-10 22:47:33,936 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:34,015 [ 1] INFO  Unity: SetDirection: (-20, -98, 0)
-2024-07-10 22:47:34,016 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:34,120 [ 1] INFO  Unity: SetDirection: (1, -100, 0)
-2024-07-10 22:47:34,121 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:34,214 [ 1] INFO  Unity: SetDirection: (21, -98, 0)
-2024-07-10 22:47:34,215 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:34,305 [ 1] INFO  Unity: SetDirection: (38, -93, 0)
-2024-07-10 22:47:34,307 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:34,372 [ 1] INFO  Unity: MoveForward
-2024-07-10 22:47:34,372 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:34,386 [ 1] INFO  Unity: SetDirection: (53, -85, 0)
-2024-07-10 22:47:34,386 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:34,464 [ 1] INFO  Unity: SetDirection: (67, -74, 0)
-2024-07-10 22:47:34,465 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:34,544 [ 1] INFO  Unity: SetDirection: (79, -61, 0)
-2024-07-10 22:47:34,545 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:34,650 [ 1] INFO  Unity: SetDirection: (90, -44, 0)
-2024-07-10 22:47:34,651 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:34,795 [ 1] INFO  Unity: SetDirection: (96, -27, 0)
-2024-07-10 22:47:34,796 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:35,338 [ 1] INFO  Unity: SetDirection: (90, -44, 0)
-2024-07-10 22:47:35,339 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:35,881 [ 1] INFO  Unity: SetDirection: (81, -59, 0)
-2024-07-10 22:47:35,881 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:36,105 [ 1] INFO  Unity: SetDirection: (69, -72, 0)
-2024-07-10 22:47:36,105 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:36,582 [ 1] INFO  Unity: SetDirection: (54, -84, 0)
-2024-07-10 22:47:36,582 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:36,728 [ 1] INFO  Unity: SetDirection: (37, -93, 0)
-2024-07-10 22:47:36,728 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:37,441 [ 1] INFO  Unity: SetDirection: (20, -98, 0)
-2024-07-10 22:47:37,442 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:38,107 [ 1] INFO  Unity: SetDirection: (1, -100, 0)
-2024-07-10 22:47:38,107 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:38,755 [ 1] INFO  Unity: SetDirection: (-18, -98, 0)
-2024-07-10 22:47:38,756 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:39,429 [ 1] INFO  Unity: SetDirection: (-35, -94, 0)
-2024-07-10 22:47:39,430 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:39,628 [ 1] INFO  Unity: SetDirection: (-51, -86, 0)
-2024-07-10 22:47:39,628 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:40,290 [ 1] INFO  Unity: SetDirection: (-66, -75, 0)
-2024-07-10 22:47:40,291 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:40,462 [ 1] INFO  Unity: SetDirection: (-78, -62, 0)
-2024-07-10 22:47:40,463 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:40,819 [ 1] INFO  Unity: SetDirection: (-88, -47, 0)
-2024-07-10 22:47:40,819 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:41,044 [ 1] INFO  Unity: SetDirection: (-95, -30, 0)
-2024-07-10 22:47:41,045 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:41,177 [ 1] INFO  Unity: SetDirection: (-99, -12, 0)
-2024-07-10 22:47:41,178 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 300 
-2024-07-10 22:47:41,904 [ 1] INFO  Unity: Stop
-2024-07-10 22:47:41,904 [ 1] INFO  Unity: MapEntitySyncRequest: ID: 6, Pos: SkillBridge.Message.NVector3 DIR: SkillBridge.Message.NVector3 SPD: 0 
-2024-07-10 22:47:43,678 [ 1] INFO  Unity: SendQuestSubmit
-2024-07-10 22:47:43,705 [ 1] INFO  Unity: OnQuestSubmit:Failed,ERR:ÈÎÎñÎ´Íê³É
-2024-07-10 22:47:47,180 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2024-07-10 22:47:47,181 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
+UIMain[30730] Awake
+2024-07-12 10:38:41,642 [ 1] INFO  Unity: LevelLoadCompleted:1
+2024-07-12 10:38:41,660 [ 1] FATAL Unity: UIMinimap.Update () (at Assets/Scripts/UI/MiniMap/UIMinimap.cs:43)
+
+NullReferenceException: Object reference not set to an instance of an object
+2024-07-12 10:39:01,134 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2024-07-12 10:39:01,134 [ 1] WARN  Unity: UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
 CloseConnection(), errorCode: 1007
-2024-07-10 22:47:47,181 [ 1] INFO  Unity: Character_6_¹þ¹þ OnDestroy: ID: 6 POS: (4315, 3285, 801) DIR: (-99, -12, 0) SPD: 0
+2024-07-12 10:39:01,146 [ 1] INFO  Unity: Character_2_¹þ¹þ OnDestroy: ID: 2 POS: (5000, 4000, 820) DIR: (100, 0, 0) SPD: 0

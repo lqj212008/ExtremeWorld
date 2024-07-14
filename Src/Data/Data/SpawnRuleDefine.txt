@@ -19,7 +19,7 @@
     "3": {
       "ID": 3,
       "MapID": "2",
-      "SpawnMonID": 1001,
+      "SpawnMonID": 1002,
       "SpawnLevel": 1,
       "SpawnPeriod": 60,
       "SpawnPoint": 3
@@ -27,10 +27,26 @@
     "4": {
       "ID": 4,
       "MapID": "2",
-      "SpawnMonID": 1001,
+      "SpawnMonID": 1003,
       "SpawnLevel": 1,
       "SpawnPeriod": 60,
       "SpawnPoint": 4
+    },
+    "5": {
+      "ID": 5,
+      "MapID": "2",
+      "SpawnMonID": 1003,
+      "SpawnLevel": 1,
+      "SpawnPeriod": 60,
+      "SpawnPoint": 5
+    },
+    "6": {
+      "ID": 6,
+      "MapID": "2",
+      "SpawnMonID": 1005,
+      "SpawnLevel": 1,
+      "SpawnPeriod": 60,
+      "SpawnPoint": 6
     }
   },
   "3": {

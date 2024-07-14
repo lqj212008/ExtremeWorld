@@ -54,13 +54,9 @@ namespace GameServer.Services
 
         public void SendEntityUpdate(NetConnection<NetSession> connection, NEntitySync entity)
         {
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-            message.Response.mapEntitySync = new MapEntitySyncResponse();
-            message.Response.mapEntitySync.entitySyncs.Add(entity);
-
-            byte[] data = PackageHandler.PackMessage(message);
-            connection.SendData(data, 0, data.Length);
+            connection.Session.Response.mapEntitySync = new MapEntitySyncResponse();
+            connection.Session.Response.mapEntitySync.entitySyncs.Add(entity);
+            connection.SendResponse();
         }
     }
 }

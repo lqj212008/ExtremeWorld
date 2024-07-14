@@ -43,7 +43,7 @@ public class TeleporterObject : MonoBehaviour {
 #if UNITY_EDITOR
 	void OnDrawGizmos ()
 	{
-		Gizmos.color = Color.green;
+		Gizmos.color = Color.red;
 		if(this.mesh != null)
 		{
 			Gizmos.DrawWireMesh(this.mesh, this.transform.position + Vector3.up * this.transform.localScale.y * .10f, this.transform.rotation, this.transform.localScale);
