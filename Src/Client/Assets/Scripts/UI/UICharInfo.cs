@@ -28,9 +28,4 @@ public class UICharInfo : MonoBehaviour {
 			this.charName.text = this.info.Name;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

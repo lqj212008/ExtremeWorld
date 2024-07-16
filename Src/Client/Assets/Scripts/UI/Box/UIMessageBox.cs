@@ -28,9 +28,9 @@ public class UIMessageBox : MonoBehaviour {
 		this.icons[2].enabled = type == MessageBoxType.Error;
 
 		if(!string.IsNullOrEmpty(btnOk)) 
-			this.buttonYesTitle.text = title;
+			this.buttonYesTitle.text = btnOk;
 		if (!string.IsNullOrEmpty(btnCancel)) 
-			this.buttonNoTitle.text = title;
+			this.buttonNoTitle.text = btnCancel;
 
 		this.buttonYes.onClick.AddListener(OnClickYes);
 		this.buttonNo.onClick.AddListener(OnClickNo);

@@ -43,14 +43,6 @@ public class UICharacterSelect : MonoBehaviour {
 		UserService.Instance.OnDeleteCharacter = OnDeleteCharacter;
 	}
 
-    
-
-
-    // Update is called once per frame
-    void Update() {
-
-	}
-
 	public void InitCharacterSelect(bool init)
 	{
 		panelCreate.SetActive(false);

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using GameServer;
 using GameServer.Entities;
+using GameServer.Network;
 using GameServer.Services;
 using SkillBridge.Message;
 
@@ -16,9 +17,11 @@ namespace Network
         public TUser User { get; set; }
         public Character Character { get; set; }
         public NEntity Entity { get; set; }
+        public IPostResponse PostResponser { get; set; }
 
         internal void Disconnected()
         {
+            this.PostResponser = null;
             if(this.Character != null)
                 UserService.Instance.CharacterLeave(this.Character);
         }
@@ -41,8 +44,8 @@ namespace Network
         {
             if(response != null)
             {
-                if (this.Character != null && this.Character.StatusManager.HasStatus)
-                    this.Character.StatusManager.ApplyResponse(Response);
+                if (PostResponser != null)
+                    this.PostResponser.PostProcess(Response);
                 byte[] data = PackageHandler.PackMessage(response);
                 response = null;
                 return data;

@@ -3,6 +3,7 @@ using Managers;
 using Models;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -12,7 +13,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager> {
 
 	// Use this for initialization
 	protected override void OnStart () {
-		StartCoroutine(InitGameObject());
+		StartCoroutine(InitGameObjects());
 		CharacterManager.Instance.OnCharacterEnter += OnCharacterEnter;
 		CharacterManager.Instance.OnCharacterLeave += OnCharacterLeave;
 	}
@@ -32,10 +33,16 @@ public class GameObjectManager : MonoSingleton<GameObjectManager> {
 
 	void OnCharacterLeave(Character character)
 	{
-		RemoveCharacterObject(character);
+		if(!Characters.ContainsKey(character.entityId))
+			return;
+		if (Characters[character.entityId] != null)
+		{
+            Destroy(Characters[character.entityId]);
+            this.Characters.Remove(character.entityId);
+        }
 	}
 
-	IEnumerator InitGameObject()
+	IEnumerator InitGameObjects()
 	{
 		foreach (var character in CharacterManager.Instance.Characters.Values) 
 		{
@@ -55,24 +62,12 @@ public class GameObjectManager : MonoSingleton<GameObjectManager> {
 				return;
 			}
 			GameObject go = (GameObject)Instantiate(obj, this.transform);
-			go.name = "Character_"+character.Info.Id+"_"+character.Info.Name;
+			go.name = "Character_" + character.Id + "_" + character.Name;
 			Characters[character.entityId] = go;
 
 			UIWorldElementManager.Instance.AddCharacterNameBar(go.transform,character);
 		}
 		this.InitGameObject(Characters[character.entityId],character);
-	}
-
-	public void RemoveCharacterObject(Character character)
-	{
-		if (!Characters.ContainsKey(character.entityId))
-			return;
-
-		if (Characters[character.entityId] != null)
-		{
-			Destroy(Characters[character.entityId]);
-			this.Characters.Remove(character.entityId);
-		}
 	}
 
 	private void InitGameObject(GameObject go, Character character)
@@ -83,13 +78,13 @@ public class GameObjectManager : MonoSingleton<GameObjectManager> {
 		if (ec != null)
 		{
 			ec.entity = character;
-			ec.isPlayer = character.IsPlayer;
+			ec.isPlayer = character.IsCurrentPlayer;
 		}
 
 		PlayerInputController pc = go.GetComponent<PlayerInputController>();
 		if (pc != null)
 		{
-			if (character.Info.Id == User.Instance.CurrentCharacter.Id)
+			if (character.IsCurrentPlayer)
 			{
 				User.Instance.CurrentCharacterObject = go;
 				MainPlayerCamera.Instance.player = go;

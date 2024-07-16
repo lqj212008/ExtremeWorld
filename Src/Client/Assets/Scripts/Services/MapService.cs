@@ -42,7 +42,7 @@ namespace Services
             
             foreach(var cha in message.Characters)
             {
-                if(User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == cha.Id)
+                if (User.Instance.CurrentCharacter == null || (cha.Type == CharacterType.Player && User.Instance.CurrentCharacter.Id == cha.Id))
                 {
                     User.Instance.CurrentCharacter = cha;
                 }
@@ -58,9 +58,9 @@ namespace Services
 
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse respone)
         {
-            Debug.LogFormat("OnMapCharacterLeave: CharID: {0}", respone.characterId);
-            if (respone.characterId != User.Instance.CurrentCharacter.Id)
-                CharacterManager.Instance.RemoveCharacter(respone.characterId);
+            Debug.LogFormat("OnMapCharacterLeave: CharID: {0}", respone.entityId);
+            if (respone.entityId != User.Instance.CurrentCharacter.EntityId)
+                CharacterManager.Instance.RemoveCharacter(respone.entityId);
             else
                 CharacterManager.Instance.Clear();
         }

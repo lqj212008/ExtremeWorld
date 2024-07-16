@@ -39,6 +39,7 @@ public class UIMinimap : MonoBehaviour {
 		{
 			playerTransform = MinimapManager.Instance.PlayerTransform;
 		}
+		if(playerTransform == null) return;
 
 		float pivotX = playerTransform.position.x / (realSize.x / 100);
 		float pivotY = playerTransform.position.z / (realSize.y / 100);

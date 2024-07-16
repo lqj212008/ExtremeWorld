@@ -69,7 +69,7 @@ namespace GameServer.Services
                     info.Name = c.Name;
                     info.Type = CharacterType.Player;
                     info.Class = (CharacterClass)c.Class;
-                    info.Tid = c.ID;
+                    info.ConfigId = c.ID;
                     sender.Session.Response.userLogin.Userinfo.Player.Characters.Add(info);
                 }
             }
@@ -117,6 +117,7 @@ namespace GameServer.Services
                 Name = request.Name,
                 Class = (int)request.Class,
                 TID = (int)request.Class,
+                Level = 1,
                 MapID = 1,
                 MapPosX = 5000,
                 MapPosY = 4000,
@@ -161,11 +162,11 @@ namespace GameServer.Services
             foreach (var c in sender.Session.User.Player.Characters)
             {
                 NCharacterInfo info = new NCharacterInfo();
-                info.Id = 0;
+                info.Id = c.ID;
                 info.Name = c.Name;
                 info.Type = CharacterType.Player;
                 info.Class = (CharacterClass)c.Class;
-                info.Tid = c.ID;
+                info.ConfigId = c.ID;
                 sender.Session.Response.createChar.Characters.Add(info);
             }
             sender.SendResponse();
@@ -198,7 +199,7 @@ namespace GameServer.Services
                     info.Name = c.Name;
                     info.Type = CharacterType.Player;
                     info.Class = (CharacterClass)c.Class;
-                    info.Tid = c.ID;
+                    info.ConfigId = c.ID;
                     sender.Session.Response.deleteChar.Characters.Add(info);
 
                 }
@@ -213,35 +214,16 @@ namespace GameServer.Services
             TCharacter dbchar = sender.Session.User.Player.Characters.ElementAt(request.characterIdx);
             Log.InfoFormat("UserGameEnterRequest: characterID:{0} :{1} Map:{2}", dbchar.ID, dbchar.Name, dbchar.MapID);
             Character character = CharacterManager.Instance.AddCharacter(dbchar);
+            SessionManager.Instance.AddSession(character.Id, sender);
 
             sender.Session.Response.gameEnter = new UserGameEnterResponse();
             sender.Session.Response.gameEnter.Result = Result.Success;
             sender.Session.Response.gameEnter.Errormsg = "None";
             sender.Session.Response.gameEnter.Character = character.Info;
 
-#if DEBUG
-            ////道具系统测试
-            //int itemID = 1;
-            //bool hasItem = character.ItemManager.HasItem(itemID);
-            //Log.InfoFormat("HasItem:[{0}]{1}", itemID, hasItem);
-            //if (hasItem)
-            //{
-            //    //character.ItemManager.RemoveItem(itemID, 1);
-            //    character.ItemManager.AddItem(1, 200);
-            //    character.ItemManager.AddItem(2, 100);
-            //    character.ItemManager.AddItem(3, 30);
-            //    character.ItemManager.AddItem(4, 120);
-            //}
-            //else
-            //{
-            //    character.ItemManager.AddItem(itemID, 2);
-            //}
-            //Models.Item item = character.ItemManager.GetItem(itemID);
-            //Log.InfoFormat("Item:[{0}][{1}]", itemID, item);
-            //DBService.Instance.Save();
-#endif
             sender.SendResponse();
             sender.Session.Character = character;
+            sender.Session.PostResponser = character;
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender,character);
         }
 
@@ -249,7 +231,7 @@ namespace GameServer.Services
         {
             Character character = sender.Session.Character;
             Log.InfoFormat("UserGameLeaveRequest: CharacterID: {0}: {1} Map: {2}", character.Id, character.Info.Name, character.Info.mapId);
-
+            SessionManager.Instance.RemoveSession(character.Id);
             CharacterLeave(character);
         
             sender.Session.Response.gameLeave = new UserGameLeaveResponse();
@@ -263,6 +245,7 @@ namespace GameServer.Services
         {
             CharacterManager.Instance.RemoveCharacter(character.Id);
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            character.Clear();
         }
     }
   
