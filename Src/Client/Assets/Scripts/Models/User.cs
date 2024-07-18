@@ -1,4 +1,5 @@
 ﻿using Common.Data;
+using SkillBridge.Message;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace Models
 			get { return userInfo; }
 		}
 
+
+
 		public void SetupUserInfo(SkillBridge.Message.NUserInfo info)
 		{
 			this.userInfo = info;
@@ -28,7 +31,7 @@ namespace Models
         public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
 		public MapDefine CurrentMapData { get; set; }
 		public GameObject CurrentCharacterObject { get; set; }
-
+		public NTeamInfo TeamInfo { get; set; }
 	}
 }
 

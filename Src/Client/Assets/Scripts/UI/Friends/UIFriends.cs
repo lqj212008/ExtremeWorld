@@ -13,12 +13,21 @@ public class UIFriends : UIWindow {
 	public UIFriendItem selectedItem;
 	// Use this for initialization
 	void Start () {
-		FriendService.Instance.OnFriendUpdate = RefreshUI;
 		this.listMain.OnItemSelected += this.OnFriendSelected;
 		RefreshUI();
 	}
 
-	public void OnFriendSelected(ListView.ListViewItem item)
+    private void OnEnable()
+    {
+        FriendService.Instance.OnFriendUpdate += RefreshUI;
+    }
+
+    private void OnDisable()
+    {
+        FriendService.Instance.OnFriendUpdate -= RefreshUI;
+    }
+
+    public void OnFriendSelected(ListView.ListViewItem item)
 	{
 		this.selectedItem = item as UIFriendItem;
 	}
@@ -48,6 +57,23 @@ public class UIFriends : UIWindow {
 		MessageBox.Show("暂未开放");
 	}
 
+	public void OnClickFriendTeamInvite()
+	{
+		if (selectedItem == null)
+		{
+			MessageBox.Show("请选择要邀请的好友");
+			return;
+		}
+		if(selectedItem.info.Status == 0)
+		{
+            MessageBox.Show("请选择在线的好友");
+            return;
+        }
+		MessageBox.Show(string.Format("确定要邀请好友【{0}】加入队伍吗? ", selectedItem.info.friendInfo.Name), "邀请好友组队", MessageBoxType.Information, "确定", "取消").onYes = () =>
+		{
+			TeamService.Instance.SendTeamInviteRequest(this.selectedItem.info.friendInfo.Id, this.selectedItem.info.friendInfo.Name);
+		};
+	}
 	public void OnClickFriendRemove()
 	{
 		if (selectedItem == null) 
@@ -55,7 +81,8 @@ public class UIFriends : UIWindow {
 			MessageBox.Show("请选择要删除的好友");
 			return;
 		}
-		MessageBox.Show(string.Format("确定要删除好友【{0}】吗？", selectedItem.info.friendInfo.Name), "删除好友", MessageBoxType.Confirm, "删除", "取消").onYes = () =>{
+		MessageBox.Show(string.Format("确定要删除好友【{0}】吗？", selectedItem.info.friendInfo.Name), "删除好友", MessageBoxType.Confirm, "删除", "取消").onYes = () =>
+		{
 			FriendService.Instance.SendFriendRemoveRequest(this.selectedItem.info.Id, this.selectedItem.info.friendInfo.Id);
 		};
 	}
