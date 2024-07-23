@@ -44,5 +44,4 @@ public class GameObjectTool
             z = Mathf.RoundToInt(vector.y * 100)
         };
     }
-
 }
