@@ -9,6 +9,7 @@ public abstract class UIWindow : MonoBehaviour,IDragHandler
 	public delegate void CloseHandler(UIWindow sender, WindowResult result);
 	public event CloseHandler OnClose;
 	private RectTransform m_rectTransform;
+	public GameObject Root;
 	public RectTransform m_RectTransform
 	{
 		get

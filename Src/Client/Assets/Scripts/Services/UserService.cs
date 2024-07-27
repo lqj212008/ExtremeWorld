@@ -21,6 +21,8 @@ namespace Services
 
 		bool connected = false;
 
+		bool isQuitGame = false;
+
 		public UserService() 
 		{
 			NetClient.Instance.OnConnect += OnGameServerConnect;
@@ -241,6 +243,8 @@ namespace Services
         public void SendGameEnter(int chatacterIdx)
 		{
 			Debug.LogFormat("UserGameEnterRequest::characterId :{0}",chatacterIdx);
+			ChatManager.Instance.Init();
+			CharacterManager.Instance.Init();
 			NetMessage message = new NetMessage();
 			message.Request = new NetMessageRequest();
 			message.Request.gameEnter = new UserGameEnterRequest();
@@ -267,8 +271,9 @@ namespace Services
             }
 		}
 
-		public void SendGameLeave()
+		public void SendGameLeave(bool isQuitGame = false)
 		{
+			this.isQuitGame = isQuitGame;
 			Debug.Log("UserGameLeaveRequest");
 			NetMessage message = new NetMessage();
 			message.Request = new NetMessageRequest();
@@ -278,12 +283,16 @@ namespace Services
 
 		void OnGameLeave(object sender, UserGameLeaveResponse response)
 		{
+			MapService.Instance.CurrentMapId = 0;
+			User.Instance.CurrentCharacter = null;
 			Debug.LogFormat("OnGameLeave: {0} [{1}]", response.Result, response.Errormsg);
-			UIMinimap.Destroy(MinimapManager.Instance.minimap);
-			if(response.Result == Result.Success)
+			if(this.isQuitGame)
 			{
-				MapService.Instance.CurrentMapId = 0;
-				User.Instance.CurrentCharacter = null;
+#if UNITY_EDITOR
+				UnityEditor.EditorApplication.isPlaying = false;
+#else
+				Application.Quit();
+#endif
 			}
 		}
 

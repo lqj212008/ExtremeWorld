@@ -46,7 +46,7 @@ namespace GameServer.Models
                     this.Leader = null;
             }
             member.Team = null;
-            timestamp = Time.timestamp;
+            timestamp = TimeUtil.timestamp;
         }
 
         public void PostProcess(NetMessageResponse response)

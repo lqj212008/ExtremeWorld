@@ -323,6 +323,9 @@ namespace SkillBridge.Message
         [global::ProtoBuf.ProtoMember(29)]
         public GuildAdminRequest guildAdmin { get; set; }
 
+        [global::ProtoBuf.ProtoMember(30, Name = @"chat")]
+        public ChatRequest Chat { get; set; }
+
     }
 
     [global::ProtoBuf.ProtoContract()]
@@ -418,6 +421,9 @@ namespace SkillBridge.Message
 
         [global::ProtoBuf.ProtoMember(29)]
         public GuildAdminResponse guildAdmin { get; set; }
+
+        [global::ProtoBuf.ProtoMember(30, Name = @"chat")]
+        public ChatResponse Chat { get; set; }
 
         [global::ProtoBuf.ProtoMember(100)]
         public StatusNotify statusNotify { get; set; }
@@ -1371,6 +1377,14 @@ namespace SkillBridge.Message
         global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
             => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
 
+        [global::ProtoBuf.ProtoMember(1, Name = @"name")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Name { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"notice")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Notice { get; set; } = "";
+
     }
 
     [global::ProtoBuf.ProtoContract()]
@@ -1448,6 +1462,88 @@ namespace SkillBridge.Message
 
         [global::ProtoBuf.ProtoMember(3, Name = @"command")]
         public GuildAdminRequest Command { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class ChatMessage : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"channel")]
+        public ChatChannel Channel { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"id")]
+        public int Id { get; set; }
+
+        [global::ProtoBuf.ProtoMember(3, Name = @"from_id")]
+        public int FromId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(4, Name = @"from_name")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string FromName { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(5, Name = @"to_id")]
+        public int ToId { get; set; }
+
+        [global::ProtoBuf.ProtoMember(6, Name = @"to_name")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string ToName { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(7, Name = @"message")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Message { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(8)]
+        public double Time { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class ChatRequest : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"message")]
+        public ChatMessage Message { get; set; }
+
+    }
+
+    [global::ProtoBuf.ProtoContract()]
+    public partial class ChatResponse : global::ProtoBuf.IExtensible
+    {
+        private global::ProtoBuf.IExtension __pbn__extensionData;
+        global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+            => global::ProtoBuf.Extensible.GetExtensionObject(ref __pbn__extensionData, createIfMissing);
+
+        [global::ProtoBuf.ProtoMember(1, Name = @"result")]
+        public Result Result { get; set; }
+
+        [global::ProtoBuf.ProtoMember(2, Name = @"errormsg")]
+        [global::System.ComponentModel.DefaultValue("")]
+        public string Errormsg { get; set; } = "";
+
+        [global::ProtoBuf.ProtoMember(3)]
+        public global::System.Collections.Generic.List<ChatMessage> localMessages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
+
+        [global::ProtoBuf.ProtoMember(4)]
+        public global::System.Collections.Generic.List<ChatMessage> worldMessages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
+
+        [global::ProtoBuf.ProtoMember(5)]
+        public global::System.Collections.Generic.List<ChatMessage> systemMessages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
+
+        [global::ProtoBuf.ProtoMember(6)]
+        public global::System.Collections.Generic.List<ChatMessage> privateMessages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
+
+        [global::ProtoBuf.ProtoMember(7)]
+        public global::System.Collections.Generic.List<ChatMessage> teamMessages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
+
+        [global::ProtoBuf.ProtoMember(8)]
+        public global::System.Collections.Generic.List<ChatMessage> guildMessages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
 
     }
 
@@ -1621,6 +1717,25 @@ namespace SkillBridge.Message
         Depost = 3,
         [global::ProtoBuf.ProtoEnum(Name = @"TRANSFER")]
         Transfer = 4,
+    }
+
+    [global::ProtoBuf.ProtoContract(Name = @"CHAT_CHANNEL")]
+    public enum ChatChannel
+    {
+        [global::ProtoBuf.ProtoEnum(Name = @"ALL")]
+        All = -1,
+        [global::ProtoBuf.ProtoEnum(Name = @"LOCAL")]
+        Local = 1,
+        [global::ProtoBuf.ProtoEnum(Name = @"WORLD")]
+        World = 2,
+        [global::ProtoBuf.ProtoEnum(Name = @"SYSTEM")]
+        System = 3,
+        [global::ProtoBuf.ProtoEnum(Name = @"PRIVATE")]
+        Private = 8,
+        [global::ProtoBuf.ProtoEnum(Name = @"TEAM")]
+        Team = 16,
+        [global::ProtoBuf.ProtoEnum(Name = @"GUILD")]
+        Guild = 32,
     }
 
 }

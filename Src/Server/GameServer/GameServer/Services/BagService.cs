@@ -7,9 +7,9 @@ using System;
 
 namespace GameServer.Services
 {
-    class BagServive : Singleton<BagServive>
+    class BagService : Singleton<BagService>
     {
-        public BagServive() 
+        public BagService() 
         {
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<BagSaveRequest>(this.OnBagSave);
         }
