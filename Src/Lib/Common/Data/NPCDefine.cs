@@ -17,7 +17,7 @@ namespace Common.Data
     {
         None = 0,
         InvokeShop = 1,
-        InvokeInsurance = 2,
+        InvokeInsrance = 2,
     }
     public class NPCDefine
     {

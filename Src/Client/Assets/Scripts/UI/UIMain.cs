@@ -27,8 +27,6 @@ public class UIMain : MonoSingleton<UIMain> {
 		
 	}
 
-
-
 	public void OnClickTest()
 	{
 		UITest test = UIManager.Instance.Show<UITest>();
@@ -67,7 +65,7 @@ public class UIMain : MonoSingleton<UIMain> {
 
 	public void OnClickRide()
 	{
-
+		UIManager.Instance.Show<UIRide>();
 	}
 
 	public void OnClickSetting()

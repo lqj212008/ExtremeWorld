@@ -57,6 +57,7 @@
     <Compile Include="Data\GameDefine.cs" />
     <Compile Include="Data\ItemDefine.cs" />
     <Compile Include="Data\QuestDefine.cs" />
+    <Compile Include="Data\RideDefine.cs" />
     <Compile Include="Data\ShopDefine.cs" />
     <Compile Include="Data\ShopItemDefine.cs" />
     <Compile Include="Data\SpawnRuleDefine.cs" />
