@@ -89,9 +89,8 @@ public class UICharacterSelect : MonoBehaviour {
 			InitCharacterSelect(true);
 			return;
 		}
-
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
 		UserService.Instance.SendCharacterCreate(this.charName.text, this.charClass);
-		InitCharacterSelect(true);
 	}
 
 	public void OnSelectClass(int charClass)
@@ -105,7 +104,8 @@ public class UICharacterSelect : MonoBehaviour {
 			names[i].text = DataManager.Instance.Characters[i + 1].Name;
 		}
 		descs.text = DataManager.Instance.Characters[charClass].Description;
-	}
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+    }
 
 	void OnCharacterCreate(Result result, string message)
 	{
@@ -145,9 +145,9 @@ public class UICharacterSelect : MonoBehaviour {
 			UICharInfo ci = this.uiChars[i].GetComponent<UICharInfo>();
 			ci.Selected = (i == idx);
 		}
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
 
-
-	}
+    }
 
 	public void OnClickPlay()
 	{
@@ -155,7 +155,8 @@ public class UICharacterSelect : MonoBehaviour {
 		{
             UserService.Instance.SendGameEnter(selectCharacterIdx);
 		}
-	}
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+    }
 
 	public void OnClickDelete()
 	{
@@ -163,6 +164,7 @@ public class UICharacterSelect : MonoBehaviour {
 		{
 			UserService.Instance.SendDeleteCharacter(selectCharacterIdx);
 		}
-	}
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+    }
 
 }

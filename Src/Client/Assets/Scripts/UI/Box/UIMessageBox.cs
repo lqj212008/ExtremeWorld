@@ -36,18 +36,25 @@ public class UIMessageBox : MonoBehaviour {
 		this.buttonNo.onClick.AddListener(OnClickNo);
 
 		this.buttonNo.gameObject.SetActive(type == MessageBoxType.Confirm);
-	}
+
+		if (type == MessageBoxType.Error)
+			SoundManager.Instance.PlaySound(SoundDefine.SFX_Message_Error);
+		else
+            SoundManager.Instance.PlaySound(SoundDefine.SFX_Message_Info);
+    }
 
 	void OnClickYes()
 	{
-		Destroy(this.gameObject);
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Confirm);
+        Destroy(this.gameObject);
 		if(this.onYes != null) 
 			this.onYes();
 	}
 
 	void OnClickNo()
 	{
-		Destroy (this.gameObject);
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Close);
+        Destroy (this.gameObject);
 		if(this.onNo != null)
 			this.onNo();
 	}

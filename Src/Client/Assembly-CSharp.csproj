@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Assets\Resloader.cs" />
+     <Compile Include="Assets\Scripts\Config\Config.cs" />
      <Compile Include="Assets\Scripts\Entities\Character.cs" />
      <Compile Include="Assets\Scripts\Entities\Entity.cs" />
      <Compile Include="Assets\Scripts\GameObject\EntityController.cs" />
@@ -98,6 +99,8 @@
      <Compile Include="Assets\Scripts\Services\StatusService.cs" />
      <Compile Include="Assets\Scripts\Services\TeamService.cs" />
      <Compile Include="Assets\Scripts\Services\UserService.cs" />
+     <Compile Include="Assets\Scripts\Sound\SoundDefine.cs" />
+     <Compile Include="Assets\Scripts\Sound\SoundManager.cs" />
      <Compile Include="Assets\Scripts\UI\Bag\UIBag.cs" />
      <Compile Include="Assets\Scripts\UI\Bag\UIconltem.cs" />
      <Compile Include="Assets\Scripts\UI\Box\InputBox.cs" />
@@ -129,6 +132,7 @@
      <Compile Include="Assets\Scripts\UI\Ride\UIRide.cs" />
      <Compile Include="Assets\Scripts\UI\Ride\UIRideItem.cs" />
      <Compile Include="Assets\Scripts\UI\Setting\UISetting.cs" />
+     <Compile Include="Assets\Scripts\UI\Setting\UISystemConfig.cs" />
      <Compile Include="Assets\Scripts\UI\Shop\UIShop.cs" />
      <Compile Include="Assets\Scripts\UI\Shop\UIShopItem.cs" />
      <Compile Include="Assets\Scripts\UI\TabView\TabButton.cs" />

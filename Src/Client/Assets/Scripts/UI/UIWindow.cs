@@ -30,7 +30,8 @@ public abstract class UIWindow : MonoBehaviour,IDragHandler
 
 	public void Close(WindowResult result = WindowResult.None)
 	{
-		UIManager.Instance.Close(this.Type);
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Close);
+        UIManager.Instance.Close(this.Type);
 		if(this.OnClose != null)
 			this.OnClose(this, result);
 		this.OnClose = null;

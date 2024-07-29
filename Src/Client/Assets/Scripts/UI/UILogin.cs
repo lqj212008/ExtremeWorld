@@ -17,17 +17,13 @@ public class UILogin : MonoBehaviour {
 		UserService.Instance.OnLogin = OnLogin;
 	}
 
-    void Update()
-    {
-        
-    }
-
     void OnLogin(SkillBridge.Message.Result result, string msg)
 	{
 		if(result == Result.Success)
 		{
 			MessageBox.Show("登录成功，准备角色选择" + msg, "提示", MessageBoxType.Information);
 			SceneManager.Instance.LoadScene("CharSelect");
+			SoundManager.Instance.PlayMusic(SoundDefine.Music_Select);
 		}
 		else
 		{
@@ -47,6 +43,7 @@ public class UILogin : MonoBehaviour {
 			MessageBox.Show("请输入密码");
 			return;
 		}
+		SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
 		UserService.Instance.SendLogin(this.user.text,this.password.text);
 	}
 
