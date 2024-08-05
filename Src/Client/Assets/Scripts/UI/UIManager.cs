@@ -81,5 +81,8 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
-
+    public void Close<T>()
+    {
+        this.Close(typeof(T));
+    }
 }
